@@ -1,39 +1,67 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: #ffffff;
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   color: #1d1d1f;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  font-synthesis: none;
 }
 
-a {
-  color: #0066cc;
-  text-decoration: none;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #fff; color: #1d1d1f; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+button, input, textarea { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+a { color: #06c; text-decoration: none; }
+a:hover { text-decoration: none; }
+button:active, a:active { transform: scale(.975); }
+button:focus-visible, a:focus-visible, input:focus, textarea:focus { outline: 3px solid rgba(0, 125, 250, .45); outline-offset: 3px; }
+
+.portfolio-main { min-height: calc(100svh - 200px); }
+.apple-eyebrow { margin: 0; color: #06c; font-size: 13px; font-weight: 700; letter-spacing: .055em; text-transform: uppercase; }
+.apple-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 0 19px; border: 1px solid transparent; border-radius: 980px; cursor: pointer; font-size: 16px; font-weight: 600; letter-spacing: -.01em; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.apple-button:hover { transform: translateY(-1px); }
+.apple-button--primary { background: #0077ed; color: #fff; box-shadow: 0 10px 22px rgba(0, 119, 237, .22); }
+.apple-button--primary:hover { background: #0071e3; }
+.apple-button--quiet { background: rgba(255, 255, 255, .72); border-color: rgba(29, 29, 31, .12); color: #1d1d1f; box-shadow: 0 1px 0 rgba(255,255,255,.7) inset; }
+.apple-button--quiet:hover { background: #fff; }
+
+.apple-hero { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, .85fr); align-items: center; min-height: 100svh; overflow: hidden; background: linear-gradient(124deg, #f7f9ff 0%, #f6f6f8 55%, #e8f2ff 100%); }
+.apple-hero::before { position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(25, 92, 169, .13) .7px, transparent .7px); background-size: 18px 18px; content: ""; mask-image: linear-gradient(90deg, #000, transparent 67%); opacity: .55; }
+.apple-hero__content { width: min(680px, 100%); margin-left: max(22px, calc((100vw - 1160px) / 2)); padding: 122px 32px 84px 0; }
+.apple-hero__eyebrow { margin-bottom: 20px; }
+.apple-hero h1 { margin: 0; color: #1d1d1f; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif; font-size: clamp(54px, 7vw, 104px); font-weight: 700; letter-spacing: -.07em; line-height: .91; }
+.apple-hero__lede { margin: 28px 0 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif; color: #1d1d1f; font-size: clamp(25px, 3.1vw, 42px); font-weight: 600; letter-spacing: -.05em; line-height: 1.04; }
+.apple-hero__description { max-width: 510px; margin: 21px 0 0; color: #6e6e73; font-size: 18px; letter-spacing: -.018em; line-height: 1.45; }
+.apple-hero__actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 34px; }
+.apple-hero__availability { display: inline-flex; align-items: center; gap: 8px; margin-top: 34px; color: #6e6e73; font-size: 13px; font-weight: 500; }
+.apple-hero__availability span { width: 8px; height: 8px; border-radius: 50%; background: #32d74b; box-shadow: 0 0 0 4px rgba(50, 215, 75, .15); }
+.apple-hero__glow { position: absolute; z-index: -1; border-radius: 50%; filter: blur(1px); pointer-events: none; }
+.apple-hero__glow--one { width: 540px; height: 540px; right: -100px; top: -170px; background: radial-gradient(circle, rgba(101, 176, 255, .45), transparent 66%); }
+.apple-hero__glow--two { width: 450px; height: 450px; left: 20%; bottom: -300px; background: radial-gradient(circle, rgba(107, 230, 198, .2), transparent 67%); }
+.apple-hero__stage { position: relative; align-self: stretch; min-height: 660px; }
+.apple-hero__orb { position: absolute; top: 50%; left: 50%; width: min(34vw, 500px); aspect-ratio: 1; border-radius: 38%; background: linear-gradient(135deg, #2078e8 2%, #6fc9ff 44%, #d7f2ff 78%); box-shadow: 24px 32px 68px rgba(14, 75, 150, .21), inset 16px 14px 38px rgba(255,255,255,.55), inset -20px -20px 50px rgba(0, 67, 172, .22); transform: translate(-46%, -50%) rotate(-26deg); }
+.apple-hero__orb::after { position: absolute; inset: 12%; border: 1px solid rgba(255,255,255,.44); border-radius: 34%; content: ""; }
+.apple-hero__panel { position: absolute; display: grid; gap: 3px; padding: 18px 20px; border: 1px solid rgba(255,255,255,.7); border-radius: 18px; background: rgba(255,255,255,.62); box-shadow: 0 14px 36px rgba(38, 75, 120, .13); backdrop-filter: blur(14px) saturate(150%); color: #1d1d1f; }
+.apple-hero__panel span { font-size: 24px; font-weight: 700; letter-spacing: -.06em; }
+.apple-hero__panel small { color: #6e6e73; font-size: 12px; font-weight: 600; }
+.apple-hero__panel--top { top: 25%; left: 10%; }
+.apple-hero__panel--bottom { right: 9%; bottom: 21%; }
+
+@media (max-width: 760px) {
+  .apple-hero { display: block; min-height: 100svh; }
+  .apple-hero__content { margin: 0; padding: 128px 22px 54px; }
+  .apple-hero h1 { font-size: clamp(54px, 16vw, 80px); }
+  .apple-hero__description { font-size: 16px; }
+  .apple-hero__stage { position: absolute; z-index: -1; top: 30%; right: -17%; width: 80%; min-height: 0; opacity: .5; }
+  .apple-hero__orb { width: 300px; }
+  .apple-hero__panel { display: none; }
+  .desktop-break { display: none; }
 }
 
-a:hover {
-  text-decoration: underline;
+@media (max-width: 440px) {
+  .apple-hero__actions { display: grid; grid-template-columns: 1fr; }
+  .apple-button { width: 100%; }
 }
 
-button {
-  font-family: inherit;
-}
-
-button:active,
-a:active {
-  transform: scale(0.95);
-}
-
-input:focus,
-textarea:focus {
-  outline: 2px solid #0071e3;
-  outline-offset: 1px;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
