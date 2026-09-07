@@ -12,7 +12,7 @@ export default function HeroSection({ goTo }) {
           Hardware & software,<br className="desktop-break" /> pensés pour le réel.
         </p>
         <p className="apple-hero__description">
-          Étudiant en Licence L2 EEA — Électronique, Énergie Électrique et Automatique (CUPGE) — je conçois des systèmes électroniques et des outils logiciels utiles, précis et robustes.
+          Étudiant en Licence L2 EEA Électronique, Énergie Électrique et Automatique (CUPGE) 
         </p>
         <div className="apple-hero__actions">
           <a href={CV_PATH} download className="apple-button apple-button--primary">Télécharger le CV <span aria-hidden="true">↓</span></a>
