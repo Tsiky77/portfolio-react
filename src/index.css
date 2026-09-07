@@ -46,6 +46,19 @@ button:focus-visible, a:focus-visible, input:focus, textarea:focus { outline: 3p
 .apple-hero__panel--top { top: 25%; left: 10%; }
 .apple-hero__panel--bottom { right: 9%; bottom: 21%; }
 
+.licence-courses { max-width: 980px; margin: 76px auto 0; text-align: left; }
+.licence-courses__heading { max-width: 580px; margin: 0 auto 30px; text-align: center; }
+.licence-courses__heading h3 { margin: 10px 0 12px; color: #1d1d1f; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif; font-size: clamp(27px, 3vw, 36px); letter-spacing: -.045em; line-height: 1.1; }
+.licence-courses__heading > p:last-child { margin: 0; color: #6e6e73; font-size: 16px; line-height: 1.45; }
+.licence-courses__grid { display: grid; grid-template-columns: 1.65fr 1fr 1fr; gap: 16px; align-items: start; }
+.licence-courses__group { overflow: hidden; border: 1px solid #dedee3; border-radius: 18px; background: rgba(255,255,255,.9); box-shadow: 0 8px 24px rgba(0,0,0,.025); }
+.licence-courses__group h4 { margin: 0; padding: 16px 18px; border-bottom: 1px solid #e8e8ed; color: #1d1d1f; font-size: 14px; font-weight: 650; letter-spacing: -.01em; }
+.licence-courses__group ul { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.licence-courses__group li { display: grid; gap: 5px; padding: 12px 18px; border-bottom: 1px solid #ededf0; }
+.licence-courses__group li:last-child { border-bottom: 0; }
+.licence-courses__group code { color: #06c; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; font-weight: 700; }
+.licence-courses__group span { color: #424245; font-size: 13px; line-height: 1.3; }
+
 @media (max-width: 760px) {
   .apple-hero { display: block; min-height: 100svh; }
   .apple-hero__content { margin: 0; padding: 128px 22px 54px; }
@@ -55,6 +68,7 @@ button:focus-visible, a:focus-visible, input:focus, textarea:focus { outline: 3p
   .apple-hero__orb { width: 300px; }
   .apple-hero__panel { display: none; }
   .desktop-break { display: none; }
+  .licence-courses__grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 440px) {
