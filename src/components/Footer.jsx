@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { EMAIL, PHONE_DISPLAY, CV_PATH } from '../data/portfolioData';
+import { EMAIL, PHONE_DISPLAY, CV_PATH, LINKEDIN } from '../data/portfolioData';
 
 export default function Footer({ goTo }) {
   return (
@@ -23,6 +23,7 @@ export default function Footer({ goTo }) {
           <h3 style={headingStyle}>Contact</h3>
           <p style={textLineStyle}><a href={`mailto:${EMAIL}`} style={{ color: '#4a2a2d' }}>{EMAIL}</a></p>
           <p style={textLineStyle}>{PHONE_DISPLAY}</p>
+          <p style={textLineStyle}><a href={LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
           <p style={textLineStyle}>Toulouse, France</p>
         </div>
         <div>

@@ -1,4 +1,4 @@
-import { EMAIL, PHONE_DISPLAY, PHONE_HREF } from '../../data/portfolioData';
+import { EMAIL, PHONE_DISPLAY, PHONE_HREF, LINKEDIN } from '../../data/portfolioData';
 
 export default function ContactSection() {
   function sendMessage(e) {
@@ -20,6 +20,7 @@ export default function ContactSection() {
       <div style={{ display: 'flex', gap: 16, justifyContent: 'center', marginTop: 32, flexWrap: 'wrap' }}>
         <a href={`mailto:${EMAIL}`} style={primaryPillStyle}>{EMAIL}</a>
         <a href={`tel:${PHONE_HREF}`} style={outlinePillStyle}>{PHONE_DISPLAY}</a>
+        <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" style={outlinePillStyle}>LinkedIn ↗</a>
       </div>
       <form onSubmit={sendMessage} style={{ maxWidth: 560, margin: '48px auto 0', background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: 32, display: 'grid', gap: 16, textAlign: 'left' }}>
         <p style={{ margin: '0 0 4px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#3b1519' }}>Envoyer un message</p>

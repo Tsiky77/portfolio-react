@@ -268,3 +268,4 @@ export const CV_PATH = `${BASE}CV_Tsiky_ANDRIANARISATA.pdf`;
 export const EMAIL = 'andrianarisatatsiky@gmail.com';
 export const PHONE_DISPLAY = '06 41 15 96 12';
 export const PHONE_HREF = '+33641159612';
+export const LINKEDIN = 'https://www.linkedin.com/in/tsiky-andrianarisata-052194313';
