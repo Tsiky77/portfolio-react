@@ -56,6 +56,31 @@ button:focus-visible, a:focus-visible, input:focus, textarea:focus { outline: 3p
 .licence-courses__group h4 { margin: 0; padding: 16px 18px; border-bottom: 1px solid #f2e1db; color: #3b1519; font-size: 14px; font-weight: 650; letter-spacing: -.01em; }
 .licence-courses__group p { margin: 0; padding: 16px 18px 20px; color: #553437; font-size: 14px; line-height: 1.55; }
 
+.timeline { padding: 88px 22px 96px; background: #fffcf5; }
+.timeline__heading { max-width: 980px; margin: 0 auto 44px; text-align: center; }
+.timeline__heading h2 { margin: 10px 0 0; color: #3b1519; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif; font-size: clamp(28px, 3.4vw, 40px); font-weight: 600; letter-spacing: -.035em; line-height: 1.1; }
+.timeline__list { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; max-width: 1160px; margin: 0 auto; padding: 0; list-style: none; }
+.timeline__list::before { position: absolute; top: 7px; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #ecd6cf, #8b1a1a 72%, #f4a9b4); content: ""; }
+.timeline__step { position: relative; display: flex; flex-direction: column; gap: 18px; }
+.timeline__dot { position: relative; z-index: 1; width: 16px; height: 16px; border: 3px solid #fffcf5; border-radius: 50%; background: #8b1a1a; box-shadow: 0 0 0 1px #8b1a1a; }
+.timeline__step--actuel .timeline__dot { background: #f4a9b4; box-shadow: 0 0 0 1px #8b1a1a, 0 0 0 6px rgba(244, 169, 180, .35); }
+.timeline__step--futur .timeline__dot { background: #fffcf5; box-shadow: 0 0 0 1px #a8434b; }
+.timeline__card { display: flex; flex: 1; flex-direction: column; gap: 6px; width: 100%; padding: 16px; border: 1px solid #ecd6cf; border-radius: 16px; background: #fffcf5; color: inherit; font: inherit; text-align: left; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.timeline__card:hover { transform: translateY(-2px); border-color: #e2c5bf; box-shadow: 0 10px 24px rgba(59, 21, 25, .08); }
+.timeline__step--actuel .timeline__card { border-color: #8b1a1a; background: #fbe9e7; }
+.timeline__step--futur .timeline__card { border-style: dashed; }
+.timeline__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.timeline__date { color: #8b1a1a; font-size: 12px; font-weight: 700; letter-spacing: .02em; }
+.timeline__badge { padding: 2px 7px; border-radius: 999px; background: #8b1a1a; color: #fffcf5; font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.timeline__title { color: #3b1519; font-size: 15px; font-weight: 650; letter-spacing: -.015em; line-height: 1.25; }
+.timeline__place { color: #7a5a5c; font-size: 13px; line-height: 1.35; }
+.timeline__type { margin-top: auto; padding-top: 6px; color: #a8434b; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+
+@media (max-width: 1100px) {
+  .timeline__list { grid-template-columns: repeat(3, 1fr); row-gap: 28px; }
+  .timeline__list::before, .timeline__dot { display: none; }
+}
+
 @media (max-width: 760px) {
   .apple-hero { display: block; min-height: 100svh; }
   .apple-hero__content { margin: 0; padding: 128px 22px 54px; }
@@ -66,6 +91,11 @@ button:focus-visible, a:focus-visible, input:focus, textarea:focus { outline: 3p
   .apple-hero__panel { display: none; }
   .desktop-break { display: none; }
   .licence-courses__grid { grid-template-columns: 1fr; }
+  .timeline { padding: 64px 22px 72px; }
+  .timeline__list { grid-template-columns: 1fr; gap: 14px; padding-left: 28px; }
+  .timeline__list::before { display: block; top: 8px; bottom: 8px; left: 7px; right: auto; width: 2px; height: auto; background: linear-gradient(180deg, #ecd6cf, #8b1a1a 72%, #f4a9b4); }
+  .timeline__step { flex-direction: row; gap: 0; }
+  .timeline__dot { display: block; position: absolute; top: 18px; left: -28px; }
 }
 
 @media (max-width: 440px) {

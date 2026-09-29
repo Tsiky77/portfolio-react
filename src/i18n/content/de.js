@@ -1,6 +1,15 @@
 // Traduction allemande du contenu de src/data/portfolioData.js.
 // Même structure, dans le même ordre : seuls les textes sont repris ici.
 export default {
+  parcours: [
+    { date: 'Seit 2008', titre: 'Leistungsschwimmen', type: 'Sport' },
+    { date: 'Juli 2021', titre: 'Schnupperpraktikum 3D-Design', type: 'Praktikum' },
+    { date: '2024 bis 2026', titre: 'Integrierter Vorbereitungszyklus SEEE', lieu: 'CESI Ingenieurschule, Toulouse', type: 'Ausbildung' },
+    { date: 'Juni bis Juli 2026', titre: 'Praktikum Python-Entwicklung', type: 'Praktikum' },
+    { date: 'Seit September 2026', titre: 'Bachelor L2 EEA, CUPGE', type: 'Ausbildung' },
+    { date: 'Juni 2027', titre: '2-monatiges Praktikum Embedded Systems', lieu: 'Gesucht', type: 'Ziel' },
+  ],
+
   experiences: [
     {
       titre: 'Praktikant Python-Entwicklung: grafische Benutzeroberfläche und wissenschaftliche Visualisierung',

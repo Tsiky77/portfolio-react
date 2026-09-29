@@ -1,6 +1,15 @@
 // Traduction espagnole du contenu de src/data/portfolioData.js.
 // Même structure, dans le même ordre : seuls les textes sont repris ici.
 export default {
+  parcours: [
+    { date: 'Desde 2008', titre: 'Natación de competición', type: 'Deporte' },
+    { date: 'Julio de 2021', titre: 'Prácticas de observación en diseño 3D', type: 'Prácticas' },
+    { date: '2024 a 2026', titre: 'Ciclo preparatorio integrado SEEE', lieu: 'CESI Escuela de Ingenieros, Toulouse', type: 'Formación' },
+    { date: 'Junio a julio de 2026', titre: 'Prácticas de desarrollador Python', type: 'Prácticas' },
+    { date: 'Desde septiembre de 2026', titre: 'Grado L2 EEA en CUPGE', type: 'Formación' },
+    { date: 'Junio de 2027', titre: 'Prácticas de 2 meses en sistemas embebidos', lieu: 'En búsqueda', type: 'Objetivo' },
+  ],
+
   experiences: [
     {
       titre: 'Becario desarrollador Python: interfaz gráfica y visualización científica',

@@ -5,6 +5,7 @@ import { useLang } from '../i18n/useLang';
 export default function Footer({ goTo }) {
   const { t } = useLang();
   const f = t.footer;
+  const buildDate = new Intl.DateTimeFormat(f.locale, { dateStyle: 'long' }).format(new Date(import.meta.env.VITE_BUILD_DATE));
   return (
     <footer style={{ background: '#fbe9e7', borderTop: '1px solid #ecd6cf', padding: '64px 22px 120px' }}>
       <div style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 32 }}>
@@ -31,7 +32,7 @@ export default function Footer({ goTo }) {
       </div>
       <div style={{ maxWidth: 980, margin: '40px auto 0', paddingTop: 16, borderTop: '1px solid #ecd6cf', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
         <p style={fineprintStyle}>{f.fineprint}</p>
-        <p style={fineprintStyle}>{f.updated}</p>
+        <p style={fineprintStyle}>{f.updated} {buildDate}</p>
       </div>
     </footer>
   );

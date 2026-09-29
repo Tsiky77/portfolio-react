@@ -10,6 +10,17 @@ export const pages = [
   { id: 'contact', label: 'Contact' },
 ];
 
+// Frise du parcours, de la plus ancienne étape à la plus récente.
+// statut : 'passe', 'actuel' ou 'futur'. page : la page ouverte au clic.
+export const parcours = [
+  { date: 'Depuis 2008', titre: 'Natation de compétition', lieu: 'ASPTT Toulouse', type: 'Sport', statut: 'passe', page: 'natation' },
+  { date: 'Juillet 2021', titre: "Stage d'observation en design 3D", lieu: 'A3D Design, Limoges', type: 'Stage', statut: 'passe', page: 'experience' },
+  { date: '2024 à 2026', titre: 'Cycle préparatoire intégré SEEE', lieu: 'CESI École d’ingénieurs, Toulouse', type: 'Formation', statut: 'passe', page: 'formation' },
+  { date: 'Juin à juillet 2026', titre: 'Stage développeur Python', lieu: 'ONERA, Toulouse', type: 'Stage', statut: 'passe', page: 'experience' },
+  { date: 'Depuis septembre 2026', titre: 'Licence L2 EEA en CUPGE', lieu: 'Université Paul Sabatier, Toulouse', type: 'Formation', statut: 'actuel', page: 'formation' },
+  { date: 'Juin 2027', titre: 'Stage de 2 mois en systèmes embarqués', lieu: 'Recherché', type: 'Objectif', statut: 'futur', page: 'contact' },
+];
+
 export const experiences = [
   {
     label: 'ONERA',

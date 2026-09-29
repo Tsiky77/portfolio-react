@@ -1,6 +1,15 @@
 // Traduction anglaise du contenu de src/data/portfolioData.js.
 // Même structure, dans le même ordre : seuls les textes sont repris ici.
 export default {
+  parcours: [
+    { date: 'Since 2008', titre: 'Competitive swimming', type: 'Sport' },
+    { date: 'July 2021', titre: '3D design observation internship', type: 'Internship' },
+    { date: '2024 to 2026', titre: 'Integrated preparatory cycle, SEEE', lieu: 'CESI School of Engineering, Toulouse', type: 'Education' },
+    { date: 'June to July 2026', titre: 'Python developer internship', type: 'Internship' },
+    { date: 'Since September 2026', titre: 'Bachelor L2 EEA, CUPGE', type: 'Education' },
+    { date: 'June 2027', titre: '2-month internship in embedded systems', lieu: 'Wanted', type: 'Goal' },
+  ],
+
   experiences: [
     {
       titre: 'Python Developer Intern: graphical user interface and scientific visualisation',

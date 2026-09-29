@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Dock from '../components/Dock';
 import HeroSection from '../components/sections/HeroSection';
+import TimelineSection from '../components/sections/TimelineSection';
 import ExperienceSection from '../components/sections/ExperienceSection';
 import FormationSection from '../components/sections/FormationSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
@@ -24,6 +25,7 @@ export default function Portfolio() {
       <Dock page={page} goTo={goTo} />
       <main className="portfolio-main">
         {page === 'accueil' && <HeroSection goTo={goTo} />}
+        {page === 'accueil' && <TimelineSection goTo={goTo} />}
         {page === 'experience' && <ExperienceSection expIndex={expIndex} setExpIndex={setExpIndex} />}
         {page === 'formation' && <FormationSection />}
         {page === 'projets' && <ProjectsSection filtre={filtre} setFiltre={setFiltre} />}

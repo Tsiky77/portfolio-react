@@ -20,7 +20,7 @@ export default function Legal() {
 
           <LegalBlock title="1. Éditeur du site">
             <p style={pStyle}>Tsiky Andrianarisata</p>
-            <p style={pStyle}>Étudiant CESI Toulouse, France</p>
+            <p style={pStyle}>Étudiant en Licence L2 EEA (CUPGE), Université Paul Sabatier, Toulouse, France</p>
             <p style={pStyle}>Contact : <a href={`mailto:${EMAIL}`} style={linkStyle}>{EMAIL}</a></p>
           </LegalBlock>
 
@@ -50,6 +50,10 @@ export default function Legal() {
               Ce site n'utilise pas de cookies de marketing ou de suivi. GitHub Pages peut déposer des cookies
               techniques nécessaires au fonctionnement du service. Ces cookies ne nécessitent pas votre
               consentement au titre de l'exemption RGPD pour les cookies strictement nécessaires.
+            </p>
+            <p style={pStyle}>
+              Le site enregistre dans votre navigateur (stockage local) votre choix de langue et votre réponse au
+              bandeau cookies. Ces informations restent sur votre appareil et ne sont transmises à personne.
             </p>
           </LegalBlock>
 

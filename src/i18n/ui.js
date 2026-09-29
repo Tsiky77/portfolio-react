@@ -15,6 +15,7 @@ export const ui = {
       panelBottomValue: '18 h/sem',
       panelBottom: 'Nageur niveau national',
     },
+    timeline: { eyebrow: 'Parcours', title: 'Mon parcours en un coup d’œil.', current: 'En cours', future: 'Objectif' },
     experience: { eyebrow: 'Expérience', title: 'Expérience professionnelle.' },
     formation: {
       eyebrow: 'Formation',
@@ -82,7 +83,8 @@ export const ui = {
       cv: 'CV (PDF)',
       legal: 'Mentions légales',
       fineprint: 'Tsiky Andrianarisata · Toulouse, France · Permis B',
-      updated: 'Mis à jour le 17 juillet 2026',
+      updated: 'Mis à jour le',
+      locale: 'fr-FR',
     },
     cookies: {
       text: "Ce site utilise uniquement des cookies essentiels requis par GitHub Pages. Aucune donnée personnelle n'est collectée ou partagée.",
@@ -107,6 +109,7 @@ export const ui = {
       panelBottomValue: '18 h/week',
       panelBottom: 'National-level swimmer',
     },
+    timeline: { eyebrow: 'Journey', title: 'My journey at a glance.', current: 'Current', future: 'Goal' },
     experience: { eyebrow: 'Experience', title: 'Professional experience.' },
     formation: {
       eyebrow: 'Education',
@@ -174,7 +177,8 @@ export const ui = {
       cv: 'CV (PDF)',
       legal: 'Legal notice',
       fineprint: 'Tsiky Andrianarisata · Toulouse, France · Driving licence',
-      updated: 'Updated on 17 July 2026',
+      updated: 'Updated on',
+      locale: 'en-GB',
     },
     cookies: {
       text: 'This site only uses essential cookies required by GitHub Pages. No personal data is collected or shared.',
@@ -199,6 +203,7 @@ export const ui = {
       panelBottomValue: '18 h/sem',
       panelBottom: 'Nadador de nivel nacional',
     },
+    timeline: { eyebrow: 'Trayectoria', title: 'Mi trayectoria de un vistazo.', current: 'En curso', future: 'Objetivo' },
     experience: { eyebrow: 'Experiencia', title: 'Experiencia profesional.' },
     formation: {
       eyebrow: 'Formación',
@@ -266,7 +271,8 @@ export const ui = {
       cv: 'CV (PDF)',
       legal: 'Aviso legal',
       fineprint: 'Tsiky Andrianarisata · Toulouse, Francia · Permiso de conducir B',
-      updated: 'Actualizado el 17 de julio de 2026',
+      updated: 'Actualizado el',
+      locale: 'es-ES',
     },
     cookies: {
       text: 'Este sitio solo utiliza las cookies esenciales requeridas por GitHub Pages. No se recoge ni se comparte ningún dato personal.',
@@ -291,6 +297,7 @@ export const ui = {
       panelBottomValue: '18 Std./Woche',
       panelBottom: 'Schwimmer auf nationalem Niveau',
     },
+    timeline: { eyebrow: 'Werdegang', title: 'Mein Werdegang auf einen Blick.', current: 'Aktuell', future: 'Ziel' },
     experience: { eyebrow: 'Erfahrung', title: 'Berufserfahrung.' },
     formation: {
       eyebrow: 'Ausbildung',
@@ -358,7 +365,8 @@ export const ui = {
       cv: 'Lebenslauf (PDF)',
       legal: 'Impressum',
       fineprint: 'Tsiky Andrianarisata · Toulouse, Frankreich · Führerschein Klasse B',
-      updated: 'Aktualisiert am 17. Juli 2026',
+      updated: 'Aktualisiert am',
+      locale: 'de-DE',
     },
     cookies: {
       text: 'Diese Website verwendet nur die von GitHub Pages benötigten essenziellen Cookies. Es werden keine personenbezogenen Daten erhoben oder weitergegeben.',
