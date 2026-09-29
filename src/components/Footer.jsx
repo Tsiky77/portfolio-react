@@ -11,6 +11,7 @@ export default function Footer({ goTo }) {
             ['Expérience', 'experience'],
             ['Projets', 'projets'],
             ['Compétences', 'competences'],
+            ['Natation', 'natation'],
             ['Contact', 'contact'],
           ].map(([label, id]) => (
             <p key={id} style={{ margin: 0, fontSize: 15, lineHeight: 2.1 }}>

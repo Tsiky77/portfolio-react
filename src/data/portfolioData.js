@@ -6,6 +6,7 @@ export const pages = [
   { id: 'formation', label: 'Formation' },
   { id: 'projets', label: 'Projets' },
   { id: 'competences', label: 'Compétences' },
+  { id: 'natation', label: 'Natation' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -55,18 +56,32 @@ export const experiences = [
       { src: `${BASE}assets/a3d-vue-eclatee-solidworks.jpeg`, cap: "Vue éclatée sous SolidWorks : les composants sont séparés pour rendre leur positionnement et leur ordre d'assemblage immédiatement lisibles." },
     ],
   },
-  {
-    label: 'Natation',
-    titre: "Nageur de compétition (niveau national)",
-    meta: "ASPTT Toulouse Natation · depuis septembre 2008",
-    paras: [
-      "Entraînements intensifs (18 heures par semaine), participation aux championnats nationaux.",
-      "Gestion du double projet sport-études : organisation, discipline, résilience.",
-    ],
-  },
 ];
 
 // Champs optionnels par projet : github (lien du dépôt) et video (lien YouTube ou fichier dans public/).
+export const natation = {
+  club: 'ASPTT Toulouse Natation',
+  stats: [
+    { valeur: '18 ans', label: 'de natation en club, depuis 2008' },
+    { valeur: '18 h', label: "d'entraînement par semaine" },
+    { valeur: 'National', label: 'championnats de France' },
+  ],
+  atouts: [
+    {
+      titre: 'Gestion du temps',
+      texte: "Mener 18 heures d'entraînement par semaine en parallèle d'une CUPGE demande une organisation rigoureuse. J'ai appris à planifier, prioriser et rester efficace sous pression.",
+    },
+    {
+      titre: 'Progrès mesurable',
+      texte: "En natation, chaque progrès se mesure au centième. J'analyse mes temps, j'ajuste mon entraînement et je recommence : la même boucle que mesurer, corriger et itérer sur un circuit.",
+    },
+    {
+      titre: 'Persévérance',
+      texte: "Dix-huit ans dans la même discipline, jusqu'au niveau national. Cette constance m'aide à aller au bout des projets techniques, surtout quand un montage ne fonctionne pas du premier coup.",
+    },
+  ],
+};
+
 export const projetsData = [
   {
     tag: 'Électronique analogique',

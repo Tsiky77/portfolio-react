@@ -25,7 +25,7 @@ export default function HeroSection({ goTo }) {
       <div className="apple-hero__stage" aria-hidden="true">
         <div className="apple-hero__orb" />
         <div className="apple-hero__panel apple-hero__panel--top"><span>EEA</span><small>Électronique · Énergie · Automatique</small></div>
-        <div className="apple-hero__panel apple-hero__panel--bottom"><span>01</span><small>Concevoir. Tester. Itérer.</small></div>
+        <div className="apple-hero__panel apple-hero__panel--bottom"><span>18 h/sem</span><small>Nageur niveau national</small></div>
       </div>
     </section>
   );

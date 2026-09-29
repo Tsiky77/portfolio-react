@@ -7,6 +7,7 @@ const navItems = [
   { id: 'formation', label: 'Formation' },
   { id: 'projets', label: 'Projets' },
   { id: 'competences', label: 'Compétences' },
+  { id: 'natation', label: 'Natation' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -166,7 +167,7 @@ export default function Dock({ page, goTo }) {
         .site-navigation__cv { padding: 11px 13px; }
         .site-navigation__menu-button { display: none; }
         .site-navigation__mobile-menu { display: none; }
-        @media (max-width: 820px) {
+        @media (max-width: 900px) {
           .site-navigation { padding: 10px 14px; }
           .site-navigation__bar { min-height: 50px; padding-left: 15px; }
           .site-navigation__links,
