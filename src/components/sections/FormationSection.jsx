@@ -9,8 +9,8 @@ export default function FormationSection() {
   const tf = t.formation;
 
   return (
-    <section style={{ background: '#fbe9e7', padding: '96px 22px', textAlign: 'center' }}>
-      <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#86696a', textTransform: 'uppercase' }}>
+    <section style={{ background: '#f3eadc', padding: '96px 22px', textAlign: 'center' }}>
+      <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#6a8186', textTransform: 'uppercase' }}>
         {tf.eyebrow}
       </p>
       
@@ -19,7 +19,7 @@ export default function FormationSection() {
         display: 'flex', 
         justifyContent: 'center', 
         margin: '24px auto 48px', 
-        background: '#f3dcd9', 
+        background: '#eadfcd', 
         padding: 4, 
         borderRadius: 20, 
         width: 'fit-content' 
@@ -30,12 +30,12 @@ export default function FormationSection() {
             padding: '8px 24px',
             border: 'none',
             borderRadius: 16,
-            background: activeTab === 'L2' ? '#fffcf5' : 'transparent',
+            background: activeTab === 'L2' ? '#fbf7f0' : 'transparent',
             boxShadow: activeTab === 'L2' ? '0 2px 8px rgba(0,0,0,0.08)' : 'none',
             cursor: 'pointer',
             fontSize: 14,
             fontWeight: 600,
-            color: activeTab === 'L2' ? '#3b1519' : '#86696a',
+            color: activeTab === 'L2' ? '#12343b' : '#6a8186',
             transition: 'all 0.2s ease',
             fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif"
           }}
@@ -48,12 +48,12 @@ export default function FormationSection() {
             padding: '8px 24px',
             border: 'none',
             borderRadius: 16,
-            background: activeTab === 'CESI' ? '#fffcf5' : 'transparent',
+            background: activeTab === 'CESI' ? '#fbf7f0' : 'transparent',
             boxShadow: activeTab === 'CESI' ? '0 2px 8px rgba(0,0,0,0.08)' : 'none',
             cursor: 'pointer',
             fontSize: 14,
             fontWeight: 600,
-            color: activeTab === 'CESI' ? '#3b1519' : '#86696a',
+            color: activeTab === 'CESI' ? '#12343b' : '#6a8186',
             transition: 'all 0.2s ease',
             fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif"
           }}
@@ -65,22 +65,22 @@ export default function FormationSection() {
       {/* CONTENU ONGLET 1 : L2 EEA */}
       {activeTab === 'L2' && (
         <div style={{ animation: 'fadeIn 0.3s ease-in-out' }}>
-          <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#3b1519' }}>
+          <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#12343b' }}>
             {tf.l2Title}
           </h2>
-          <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#3b1519' }}>
+          <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#12343b' }}>
             {tf.l2Subtitle}
           </p>
 
-          <div style={{ maxWidth: 980, margin: '48px auto 0', background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: 32, textAlign: 'left', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
-            <p style={{ margin: '0 0 8px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#8b1a1a', textTransform: 'uppercase' }}>{tf.l2CardLabel}</p>
-            <h3 style={{ margin: '0 0 12px', fontSize: 20, fontWeight: 600, letterSpacing: '-0.374px', color: '#3b1519' }}>
+          <div style={{ maxWidth: 980, margin: '48px auto 0', background: '#fbf7f0', border: '1px solid #e4d8c5', borderRadius: 18, padding: 32, textAlign: 'left', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+            <p style={{ margin: '0 0 8px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#227c8e', textTransform: 'uppercase' }}>{tf.l2CardLabel}</p>
+            <h3 style={{ margin: '0 0 12px', fontSize: 20, fontWeight: 600, letterSpacing: '-0.374px', color: '#12343b' }}>
               {tf.l2CardTitle}
             </h3>
-            <p style={{ margin: '0 0 16px', fontSize: 15, lineHeight: 1.5, letterSpacing: '-0.224px', color: '#4a2a2d' }}>
+            <p style={{ margin: '0 0 16px', fontSize: 15, lineHeight: 1.5, letterSpacing: '-0.224px', color: '#2b4a51' }}>
               {tf.l2CardText}
             </p>
-            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, color: '#86696a' }}>
+            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, color: '#6a8186' }}>
               {tf.l2CardNote}
             </p>
           </div>
@@ -106,42 +106,42 @@ export default function FormationSection() {
       {/* CONTENU ONGLET 2 : CESI TOULOUSE */}
       {activeTab === 'CESI' && (
         <div style={{ animation: 'fadeIn 0.3s ease-in-out' }}>
-          <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#3b1519' }}>
+          <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#12343b' }}>
             {tf.cesiTitle}
           </h2>
-          <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#3b1519' }}>
+          <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#12343b' }}>
             {tf.cesiSubtitle}
           </p>
 
           {/* Cartes de compétences CESI */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,200px),1fr))', gap: 20, maxWidth: 980, margin: '48px auto 0', textAlign: 'left' }}>
             {formationCards.map((c) => (
-              <div key={c.titre} style={{ background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: 24 }}>
-                <h3 style={{ margin: '0 0 8px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#3b1519' }}>{c.titre}</h3>
-                <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#4a2a2d' }}>{c.desc}</p>
+              <div key={c.titre} style={{ background: '#fbf7f0', border: '1px solid #e4d8c5', borderRadius: 18, padding: 24 }}>
+                <h3 style={{ margin: '0 0 8px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#12343b' }}>{c.titre}</h3>
+                <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#2b4a51' }}>{c.desc}</p>
               </div>
             ))}
           </div>
 
-          <h3 style={{ margin: '64px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 600, lineHeight: 1.14, color: '#3b1519' }}>
+          <h3 style={{ margin: '64px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 600, lineHeight: 1.14, color: '#12343b' }}>
             {tf.semestersTitle}
           </h3>
           
           {/* Grille des semestres */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,220px),1fr))', gap: 20, maxWidth: 980, margin: '32px auto 0', textAlign: 'left' }}>
             {semesters.map((s) => (
-              <div key={s.label} style={{ background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 10, overflow: 'hidden' }}>
+              <div key={s.label} style={{ background: '#fbf7f0', border: '1px solid #e4d8c5', borderRadius: 18, padding: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 10, overflow: 'hidden' }}>
                 <div style={{ width: '100%', aspectRatio: '16/9', margin: '0 0 4px', flexShrink: 0 }}>
                   <img src={s.photo} alt={s.label} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
-                <p style={{ margin: 0, padding: '0 24px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#8b1a1a', textTransform: 'uppercase' }}>{s.label}</p>
-                <ul style={{ margin: 0, padding: '0 24px 0 42px', display: 'flex', flexDirection: 'column', gap: 6, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#4a2a2d' }}>
+                <p style={{ margin: 0, padding: '0 24px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#227c8e', textTransform: 'uppercase' }}>{s.label}</p>
+                <ul style={{ margin: 0, padding: '0 24px 0 42px', display: 'flex', flexDirection: 'column', gap: 6, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#2b4a51' }}>
                   {s.topics.map((t) => (
                     <li key={t}>{t}</li>
                   ))}
                 </ul>
-                <p style={{ margin: 'auto 24px 0', paddingTop: 4, fontSize: 11, color: '#a8918f' }}>
-                  <a href={s.creditHref} target="_blank" rel="noopener noreferrer" style={{ color: '#a8918f' }}>{s.credit}</a>
+                <p style={{ margin: 'auto 24px 0', paddingTop: 4, fontSize: 11, color: '#9aa9a8' }}>
+                  <a href={s.creditHref} target="_blank" rel="noopener noreferrer" style={{ color: '#9aa9a8' }}>{s.credit}</a>
                 </p>
               </div>
             ))}
@@ -154,7 +154,7 @@ export default function FormationSection() {
                 <div style={{ width: '100%', aspectRatio: '4/3' }}>
                   <img src={im.src} alt={im.cap} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 18, display: 'block' }} />
                 </div>
-                <figcaption style={{ fontSize: 12, letterSpacing: '-0.12px', color: '#86696a', textAlign: 'center' }}>{im.cap}</figcaption>
+                <figcaption style={{ fontSize: 12, letterSpacing: '-0.12px', color: '#6a8186', textAlign: 'center' }}>{im.cap}</figcaption>
               </figure>
             ))}
           </div>

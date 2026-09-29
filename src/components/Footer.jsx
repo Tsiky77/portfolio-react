@@ -7,7 +7,7 @@ export default function Footer({ goTo }) {
   const f = t.footer;
   const buildDate = new Intl.DateTimeFormat(f.locale, { dateStyle: 'long' }).format(new Date(import.meta.env.VITE_BUILD_DATE));
   return (
-    <footer style={{ background: '#fbe9e7', borderTop: '1px solid #ecd6cf', padding: '64px 22px 120px' }}>
+    <footer style={{ background: '#f3eadc', borderTop: '1px solid #e4d8c5', padding: '64px 22px 120px' }}>
       <div style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 32 }}>
         <div>
           <h3 style={headingStyle}>{f.navigation}</h3>
@@ -19,7 +19,7 @@ export default function Footer({ goTo }) {
         </div>
         <div>
           <h3 style={headingStyle}>{f.contact}</h3>
-          <p style={textLineStyle}><a href={`mailto:${EMAIL}`} style={{ color: '#4a2a2d' }}>{EMAIL}</a></p>
+          <p style={textLineStyle}><a href={`mailto:${EMAIL}`} style={{ color: '#2b4a51' }}>{EMAIL}</a></p>
           <p style={textLineStyle}>{PHONE_DISPLAY}</p>
           <p style={textLineStyle}><a href={LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
           <p style={textLineStyle}>{f.location}</p>
@@ -30,7 +30,7 @@ export default function Footer({ goTo }) {
           <p style={textLineStyle}><Link to="/legal">{f.legal}</Link></p>
         </div>
       </div>
-      <div style={{ maxWidth: 980, margin: '40px auto 0', paddingTop: 16, borderTop: '1px solid #ecd6cf', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
+      <div style={{ maxWidth: 980, margin: '40px auto 0', paddingTop: 16, borderTop: '1px solid #e4d8c5', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
         <p style={fineprintStyle}>{f.fineprint}</p>
         <p style={fineprintStyle}>{f.updated} {buildDate}</p>
       </div>
@@ -38,7 +38,7 @@ export default function Footer({ goTo }) {
   );
 }
 
-const headingStyle = { margin: '0 0 8px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#3b1519' };
-const linkBtnStyle = { background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontFamily: 'inherit', fontSize: 15, color: '#4a2a2d' };
-const textLineStyle = { margin: 0, fontSize: 15, lineHeight: 2.1, color: '#4a2a2d' };
-const fineprintStyle = { margin: 0, fontSize: 12, lineHeight: 1.3, letterSpacing: '-0.12px', color: '#86696a' };
+const headingStyle = { margin: '0 0 8px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#12343b' };
+const linkBtnStyle = { background: 'none', border: 'none', cursor: 'pointer', padding: 0, fontFamily: 'inherit', fontSize: 15, color: '#2b4a51' };
+const textLineStyle = { margin: 0, fontSize: 15, lineHeight: 2.1, color: '#2b4a51' };
+const fineprintStyle = { margin: 0, fontSize: 12, lineHeight: 1.3, letterSpacing: '-0.12px', color: '#6a8186' };

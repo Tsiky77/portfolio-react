@@ -94,7 +94,7 @@ export default function Dock({ page, goTo }) {
           margin: 0 auto;
           pointer-events: auto;
           background: rgba(255, 252, 245, 0.82);
-          border: 1px solid rgba(59, 21, 25, 0.1);
+          border: 1px solid rgba(18, 52, 59, 0.1);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
           backdrop-filter: saturate(180%) blur(18px);
           -webkit-backdrop-filter: saturate(180%) blur(18px);
@@ -121,13 +121,13 @@ export default function Dock({ page, goTo }) {
           padding: 0;
           background: none;
           border: 0;
-          color: #3b1519;
+          color: #12343b;
           font-size: 17px;
           font-weight: 700;
           letter-spacing: -0.45px;
         }
         .site-navigation__role {
-          color: #7a5a5c;
+          color: #5b7479;
           font-size: 12px;
           font-weight: 500;
           letter-spacing: -0.1px;
@@ -143,15 +143,15 @@ export default function Dock({ page, goTo }) {
           border: 0;
           border-radius: 9px;
           background: transparent;
-          color: #5e3c3f;
+          color: #3d5c63;
           font-size: 13px;
           line-height: 1;
           transition: background 0.18s ease, color 0.18s ease;
         }
         .site-navigation__link:hover,
         .site-navigation__link.is-active {
-          background: #3b1519;
-          color: #fffcf5;
+          background: #12343b;
+          color: #fbf7f0;
         }
         .site-navigation__cv,
         .site-navigation__mobile-cv {
@@ -160,8 +160,8 @@ export default function Dock({ page, goTo }) {
           justify-content: center;
           gap: 7px;
           border-radius: 10px;
-          background: #8b1a1a;
-          color: #fffcf5;
+          background: #227c8e;
+          color: #fbf7f0;
           font-size: 13px;
           font-weight: 600;
           line-height: 1;
@@ -176,15 +176,15 @@ export default function Dock({ page, goTo }) {
           align-items: center;
           height: 36px;
           padding: 0 26px 0 11px;
-          border: 1px solid #e2c5bf;
+          border: 1px solid #d9cab3;
           border-radius: 10px;
-          background: #fffcf5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%233b1519' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center;
-          color: #3b1519;
+          background: #fbf7f0 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%233b1519' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center;
+          color: #12343b;
           font-size: 12px;
           font-weight: 600;
           cursor: pointer;
         }
-        .site-navigation__lang:focus-within { outline: 3px solid rgba(139, 26, 26, .45); outline-offset: 2px; }
+        .site-navigation__lang:focus-within { outline: 3px solid rgba(34, 124, 142, .45); outline-offset: 2px; }
         .site-navigation__lang select {
           position: absolute;
           inset: 0;
@@ -207,15 +207,15 @@ export default function Dock({ page, goTo }) {
             gap: 5px;
             width: 38px;
             height: 38px;
-            border: 1px solid #e2c5bf;
+            border: 1px solid #d9cab3;
             border-radius: 10px;
-            background: #fffcf5;
+            background: #fbf7f0;
           }
           .site-navigation__menu-button span {
             width: 16px;
             height: 1.5px;
             border-radius: 2px;
-            background: #3b1519;
+            background: #12343b;
             transition: transform 0.18s ease;
           }
           .site-navigation__mobile-menu {
@@ -234,12 +234,12 @@ export default function Dock({ page, goTo }) {
             border: 0;
             border-radius: 10px;
             background: transparent;
-            color: #3b1519;
+            color: #12343b;
             font: 600 15px/1 inherit;
             text-align: left;
             cursor: pointer;
           }
-          .site-navigation__mobile-link.is-active { background: #fbe4e6; color: #8b1a1a; }
+          .site-navigation__mobile-link.is-active { background: #dcecef; color: #227c8e; }
           .site-navigation__mobile-cv { margin-top: 4px; padding: 13px; }
         }
         @media (max-width: 430px) {
