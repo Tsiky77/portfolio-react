@@ -21,7 +21,7 @@ export default function ExperienceSection({ expIndex, setExpIndex }) {
       <p style={{ margin: '8px 0 0', fontSize: 14, letterSpacing: '-0.224px', color: '#f0d6d6' }}>{exp.meta}</p>
       
       {exp.chiffres && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: 14, maxWidth: 720, margin: '32px auto 0' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: 14, maxWidth: 980, margin: '32px auto 0' }}>
           {exp.chiffres.map((c) => (
             <div key={c.label} style={{ padding: '18px 16px', borderRadius: 16, border: '1px solid #6b2a30', background: 'rgba(255, 252, 245, 0.04)' }}>
               <p style={{ margin: 0, fontSize: 28, fontWeight: 700, letterSpacing: '-0.04em', color: '#f4a9b4' }}>{c.valeur}</p>
@@ -31,14 +31,14 @@ export default function ExperienceSection({ expIndex, setExpIndex }) {
         </div>
       )}
 
-      <div style={{ maxWidth: 720, margin: '32px auto 0', textAlign: 'left', display: 'grid', gap: 20 }}>
+      <div style={{ maxWidth: exp.details ? 980 : 720, margin: '32px auto 0', textAlign: 'left', display: 'grid', gap: 20 }}>
         {/* Si l'expérience utilise des paragraphes classiques */}
         {exp.paras && exp.paras.map((pa, i) => (
           <p key={i} style={{ margin: 0, fontSize: 17, lineHeight: 1.47, letterSpacing: '-0.374px', color: '#f0d6d6' }}>{pa}</p>
         ))}
 
         {exp.details && exp.details.length > 0 && (
-          <div style={{ display: 'grid', gap: 20 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,400px),1fr))', gap: '24px 40px' }}>
             {exp.details.map((detail) => (
               <article key={detail.titre} style={{ paddingLeft: 18, borderLeft: '2px solid #86696a' }}>
                 <h3 style={{ margin: '0 0 6px', fontSize: 16, fontWeight: 600, color: '#fffcf5' }}>{detail.titre}</h3>
@@ -50,7 +50,7 @@ export default function ExperienceSection({ expIndex, setExpIndex }) {
       </div>
 
       {exp.images && exp.images.length > 0 && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))', gap: 24, maxWidth: 980, margin: '48px auto 0' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: `repeat(auto-fit,minmax(min(100%,${exp.images.length >= 3 ? 260 : 320}px),1fr))`, gap: 24, maxWidth: 980, margin: '48px auto 0' }}>
           {exp.images.map((im) => (
             <figure key={im.src} style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
               <div
