@@ -1,13 +1,15 @@
-import { experiences } from '../../data/portfolioData';
+import { useLang } from '../../i18n/useLang';
 
 export default function ExperienceSection({ expIndex, setExpIndex }) {
+  const { t, content } = useLang();
+  const { experiences } = content;
   const exp = experiences[expIndex];
 
   return (
     <section id="experience" style={{ background: '#3b1519', padding: '96px 22px', textAlign: 'center' }}>
-      <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#f0d6d6', textTransform: 'uppercase' }}>Expérience</p>
+      <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#f0d6d6', textTransform: 'uppercase' }}>{t.experience.eyebrow}</p>
       <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#fffcf5' }}>
-        Expérience professionnelle.
+        {t.experience.title}
       </h2>
       <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginTop: 32 }}>
         {experiences.map((e, i) => (

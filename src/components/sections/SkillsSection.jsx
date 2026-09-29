@@ -1,4 +1,4 @@
-import { skills } from '../../data/portfolioData';
+import { useLang } from '../../i18n/useLang';
 
 const cardStyles = [
   { accent: '#8b1a1a', tint: '#fbe4e6', icon: '</>' },
@@ -7,25 +7,21 @@ const cardStyles = [
   { accent: '#b5485a', tint: '#fbe8ec', icon: '↗' },
 ];
 
-const languages = [
-  { name: 'Français', level: 'Langue maternelle' },
-  { name: 'Anglais', level: 'B2' },
-  { name: 'Espagnol', level: 'B2' },
-  { name: 'Allemand', level: 'A2' },
-];
-
 export default function SkillsSection() {
+  const { t, content } = useLang();
+  const { skills } = content;
+  const s = t.skills;
   return (
     <section id="competences" style={{ background: '#fbe9e7', padding: '96px 22px' }}>
       <div style={{ maxWidth: 980, margin: '0 auto', textAlign: 'center' }}>
         <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#8b1a1a', textTransform: 'uppercase' }}>
-          Savoir-faire
+          {s.eyebrow}
         </p>
         <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#3b1519' }}>
-          Compétences techniques.
+          {s.title}
         </h2>
         <p style={{ maxWidth: 570, margin: '16px auto 0', fontSize: 17, lineHeight: 1.5, letterSpacing: '-0.224px', color: '#7a5a5c' }}>
-          Un socle pluridisciplinaire, de la programmation à l’électronique, pour concevoir des solutions concrètes.
+          {s.intro}
         </p>
       </div>
 
@@ -56,11 +52,11 @@ export default function SkillsSection() {
 
       <aside style={{ maxWidth: 980, margin: '18px auto 0', padding: '22px 24px', borderRadius: 20, background: '#3b1519', color: '#fffcf5', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
         <div>
-          <p style={{ margin: 0, fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#f4a9b4' }}>Langues</p>
-          <p style={{ margin: '5px 0 0', fontSize: 16, fontWeight: 500 }}>Communiquer dans un contexte international.</p>
+          <p style={{ margin: 0, fontSize: 13, fontWeight: 600, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#f4a9b4' }}>{s.languagesLabel}</p>
+          <p style={{ margin: '5px 0 0', fontSize: 16, fontWeight: 500 }}>{s.languagesText}</p>
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-          {languages.map((language) => (
+          {s.languages.map((language) => (
             <span key={language.name} style={{ padding: '8px 11px', border: '1px solid #6b2a30', borderRadius: 10, fontSize: 13, lineHeight: 1.2, color: '#fbe9e7' }}>
               <strong style={{ fontWeight: 600 }}>{language.name}</strong><span style={{ color: '#d9b3b5' }}> · {language.level}</span>
             </span>

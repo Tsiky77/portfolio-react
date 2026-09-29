@@ -1,17 +1,19 @@
-import { natation } from '../../data/portfolioData';
+import { useLang } from '../../i18n/useLang';
 
 export default function SportSection() {
+  const { t, content } = useLang();
+  const { natation } = content;
   return (
     <section id="natation" style={{ background: '#fbe9e7', padding: '96px 22px' }}>
       <div style={{ maxWidth: 980, margin: '0 auto', textAlign: 'center' }}>
         <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#8b1a1a', textTransform: 'uppercase' }}>
-          Au-delà de l’électronique
+          {t.sport.eyebrow}
         </p>
         <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#3b1519' }}>
-          Nageur de compétition.
+          {t.sport.title}
         </h2>
         <p style={{ maxWidth: 600, margin: '16px auto 0', fontSize: 17, lineHeight: 1.5, letterSpacing: '-0.224px', color: '#7a5a5c' }}>
-          {natation.club}. Un double projet sport et études mené depuis l’enfance, qui façonne ma manière de travailler.
+          {natation.club}. {t.sport.intro}
         </p>
       </div>
 
@@ -26,7 +28,7 @@ export default function SportSection() {
 
       <div style={{ maxWidth: 980, margin: '64px auto 0', textAlign: 'center' }}>
         <h3 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 600, lineHeight: 1.14, color: '#3b1519' }}>
-          Ce que le bassin m’apporte en ingénierie.
+          {t.sport.assetsTitle}
         </h3>
       </div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,260px),1fr))', gap: 18, maxWidth: 980, margin: '32px auto 0' }}>

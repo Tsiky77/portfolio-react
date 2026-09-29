@@ -1,16 +1,10 @@
-import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { LANGUAGES, LanguageContext } from './useLang';
 import * as base from '../data/portfolioData';
 import { ui } from './ui';
 import en from './content/en';
 import es from './content/es';
 import de from './content/de';
-
-export const LANGUAGES = [
-  { code: 'fr', label: 'FR', name: 'Français' },
-  { code: 'en', label: 'EN', name: 'English' },
-  { code: 'es', label: 'ES', name: 'Español' },
-  { code: 'de', label: 'DE', name: 'Deutsch' },
-];
 
 const overlays = { en, es, de };
 const STORAGE_KEY = 'lang';
@@ -39,8 +33,6 @@ function initialLang() {
   return LANGUAGES.some((l) => l.code === browser) ? browser : 'fr';
 }
 
-const LanguageContext = createContext(null);
-
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState(initialLang);
 
@@ -61,9 +53,4 @@ export function LanguageProvider({ children }) {
   }), [lang]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
-}
-
-// eslint-disable-next-line react-refresh/only-export-components
-export function useLang() {
-  return useContext(LanguageContext);
 }

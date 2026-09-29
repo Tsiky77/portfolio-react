@@ -1,14 +1,17 @@
 import { useState } from 'react';
-import { formationCards, formationImages, licenceSubjects, semesters } from '../../data/portfolioData';
+import { useLang } from '../../i18n/useLang';
 
 export default function FormationSection() {
   // État pour gérer l'onglet actif ('L2' ou 'CESI')
   const [activeTab, setActiveTab] = useState('L2');
+  const { t, content } = useLang();
+  const { formationCards, formationImages, licenceSubjects, semesters } = content;
+  const tf = t.formation;
 
   return (
     <section style={{ background: '#fbe9e7', padding: '96px 22px', textAlign: 'center' }}>
       <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#86696a', textTransform: 'uppercase' }}>
-        Formation
+        {tf.eyebrow}
       </p>
       
       {/* Sélecteur d'onglets */}
@@ -37,7 +40,7 @@ export default function FormationSection() {
             fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif"
           }}
         >
-          Licence L2 EEA (Actuel)
+          {tf.tabL2}
         </button>
         <button
           onClick={() => setActiveTab('CESI')}
@@ -55,7 +58,7 @@ export default function FormationSection() {
             fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif"
           }}
         >
-          Cycle Prépa CESI
+          {tf.tabCesi}
         </button>
       </div>
 
@@ -63,30 +66,30 @@ export default function FormationSection() {
       {activeTab === 'L2' && (
         <div style={{ animation: 'fadeIn 0.3s ease-in-out' }}>
           <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#3b1519' }}>
-            Université Paul Sabatier, Toulouse.
+            {tf.l2Title}
           </h2>
           <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#3b1519' }}>
-            Licence L2 EEA en CUPGE : Classe Universitaire Préparatoire aux Grandes Écoles, en Électronique, Énergie Électrique et Automatique.
+            {tf.l2Subtitle}
           </p>
 
           <div style={{ maxWidth: 980, margin: '48px auto 0', background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: 32, textAlign: 'left', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
-            <p style={{ margin: '0 0 8px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#8b1a1a', textTransform: 'uppercase' }}>Programme en cours</p>
+            <p style={{ margin: '0 0 8px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#8b1a1a', textTransform: 'uppercase' }}>{tf.l2CardLabel}</p>
             <h3 style={{ margin: '0 0 12px', fontSize: 20, fontWeight: 600, letterSpacing: '-0.374px', color: '#3b1519' }}>
-              Électronique, Énergie Électrique, Automatique (EEA)
+              {tf.l2CardTitle}
             </h3>
             <p style={{ margin: '0 0 16px', fontSize: 15, lineHeight: 1.5, letterSpacing: '-0.224px', color: '#4a2a2d' }}>
-              Formation intégrée au programme CUPGE (Classe Universitaire Préparatoire aux Grandes Écoles) de l’Université Paul Sabatier de Toulouse, dès la rentrée de septembre 2026. Un socle scientifique solide, d’un niveau équivalent à celui d’une classe préparatoire classique.
+              {tf.l2CardText}
             </p>
             <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, color: '#86696a' }}>
-              Spécialisation prévue en systèmes embarqués, traitement du signal et informatique industrielle.
+              {tf.l2CardNote}
             </p>
           </div>
 
           <div className="licence-courses">
             <div className="licence-courses__heading">
-              <p className="apple-eyebrow">Programme</p>
-              <h3>Les enseignements abordés.</h3>
-              <p>Trois matières qui structurent ma formation et renforcent mon socle scientifique.</p>
+              <p className="apple-eyebrow">{tf.coursesEyebrow}</p>
+              <h3>{tf.coursesTitle}</h3>
+              <p>{tf.coursesIntro}</p>
             </div>
             <div className="licence-courses__grid">
               {licenceSubjects.map((subject) => (
@@ -104,10 +107,10 @@ export default function FormationSection() {
       {activeTab === 'CESI' && (
         <div style={{ animation: 'fadeIn 0.3s ease-in-out' }}>
           <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#3b1519' }}>
-            CESI École d'Ingénieurs.
+            {tf.cesiTitle}
           </h2>
           <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#3b1519' }}>
-            Cycle préparatoire intégré, spécialité Systèmes Électriques et Électroniques Embarqués (S3E).
+            {tf.cesiSubtitle}
           </p>
 
           {/* Cartes de compétences CESI */}
@@ -121,7 +124,7 @@ export default function FormationSection() {
           </div>
 
           <h3 style={{ margin: '64px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 600, lineHeight: 1.14, color: '#3b1519' }}>
-            Matières abordées, semestre par semestre.
+            {tf.semestersTitle}
           </h3>
           
           {/* Grille des semestres */}

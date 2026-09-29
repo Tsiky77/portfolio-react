@@ -1,18 +1,13 @@
 import { useState } from 'react';
 import { CV_PATH } from '../data/portfolioData';
+import { LANGUAGES, useLang } from '../i18n/useLang';
 
-const navItems = [
-  { id: 'accueil', label: 'Accueil' },
-  { id: 'experience', label: 'Expérience' },
-  { id: 'formation', label: 'Formation' },
-  { id: 'projets', label: 'Projets' },
-  { id: 'competences', label: 'Compétences' },
-  { id: 'natation', label: 'Natation' },
-  { id: 'contact', label: 'Contact' },
-];
+const navIds = ['accueil', 'experience', 'formation', 'projets', 'competences', 'natation', 'contact'];
 
 export default function Dock({ page, goTo }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { lang, setLang, t } = useLang();
+  const navItems = navIds.map((id) => ({ id, label: t.nav[id] }));
 
   function navigateTo(id) {
     goTo(id);
@@ -22,12 +17,12 @@ export default function Dock({ page, goTo }) {
   return (
     <header className="site-navigation">
       <div className="site-navigation__bar">
-        <button className="site-navigation__brand" onClick={() => navigateTo('accueil')} aria-label="Retour à l'accueil">
+        <button className="site-navigation__brand" onClick={() => navigateTo('accueil')} aria-label={t.navAria.home}>
           <span>Tsiky.</span>
           <span className="site-navigation__role">Portfolio · EEA</span>
         </button>
 
-        <nav className="site-navigation__links" aria-label="Navigation principale">
+        <nav className="site-navigation__links" aria-label={t.navAria.main}>
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -40,8 +35,17 @@ export default function Dock({ page, goTo }) {
           ))}
         </nav>
 
+        <label className="site-navigation__lang">
+          <span className="site-navigation__lang-sr">{t.navAria.language}</span>
+          <select value={lang} onChange={(e) => setLang(e.target.value)} aria-label={t.navAria.language}>
+            {LANGUAGES.map((l) => (
+              <option key={l.code} value={l.code}>{l.label} · {l.name}</option>
+            ))}
+          </select>
+        </label>
+
         <a className="site-navigation__cv" href={CV_PATH} download>
-          <span className="site-navigation__cv-label">Télécharger le CV</span>
+          <span className="site-navigation__cv-label">{t.downloadCv}</span>
           <span aria-hidden="true">↓</span>
         </a>
 
@@ -50,7 +54,7 @@ export default function Dock({ page, goTo }) {
           onClick={() => setIsMenuOpen((open) => !open)}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
-          aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-label={isMenuOpen ? t.navAria.close : t.navAria.open}
         >
           <span />
           <span />
@@ -58,7 +62,7 @@ export default function Dock({ page, goTo }) {
       </div>
 
       {isMenuOpen && (
-        <nav id="mobile-navigation" className="site-navigation__mobile-menu" aria-label="Navigation mobile">
+        <nav id="mobile-navigation" className="site-navigation__mobile-menu" aria-label={t.navAria.mobile}>
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -71,7 +75,7 @@ export default function Dock({ page, goTo }) {
             </button>
           ))}
           <a className="site-navigation__mobile-cv" href={CV_PATH} download onClick={() => setIsMenuOpen(false)}>
-            Télécharger le CV <span aria-hidden="true">↓</span>
+            {t.downloadCv} <span aria-hidden="true">↓</span>
           </a>
         </nav>
       )}
@@ -165,6 +169,22 @@ export default function Dock({ page, goTo }) {
           white-space: nowrap;
         }
         .site-navigation__cv { padding: 11px 13px; }
+        .site-navigation__lang { position: relative; flex: none; }
+        .site-navigation__lang-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+        .site-navigation__lang select {
+          width: 58px;
+          height: 36px;
+          padding: 0 20px 0 10px;
+          border: 1px solid #e2c5bf;
+          border-radius: 10px;
+          background: #fffcf5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%233b1519' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;
+          color: #3b1519;
+          font: 600 12px/1 inherit;
+          cursor: pointer;
+          appearance: none;
+          -webkit-appearance: none;
+          text-overflow: clip;
+        }
         .site-navigation__menu-button { display: none; }
         .site-navigation__mobile-menu { display: none; }
         @media (max-width: 900px) {
@@ -172,13 +192,13 @@ export default function Dock({ page, goTo }) {
           .site-navigation__bar { min-height: 50px; padding-left: 15px; }
           .site-navigation__links,
           .site-navigation__cv { display: none; }
+          .site-navigation__lang { margin-left: auto; }
           .site-navigation__menu-button {
             display: grid;
             place-content: center;
             gap: 5px;
             width: 38px;
             height: 38px;
-            margin-left: auto;
             border: 1px solid #e2c5bf;
             border-radius: 10px;
             background: #fffcf5;

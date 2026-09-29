@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useLang } from '../i18n/useLang';
 
 export default function CookieBanner() {
+  const { t } = useLang();
   const [visible, setVisible] = useState(() => !localStorage.getItem('cookie-consent'));
 
   function accept() {
@@ -31,13 +33,12 @@ export default function CookieBanner() {
           }}
         >
           <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#4a2a2d', flex: '1 1 320px' }}>
-            Ce site utilise uniquement des cookies essentiels requis par GitHub Pages. Aucune donnée personnelle
-            n'est collectée ou partagée.{' '}
-            <Link to="/legal" onClick={accept} style={{ color: '#8b1a1a' }}>Politique de confidentialité</Link>
+            {t.cookies.text}{' '}
+            <Link to="/legal" onClick={accept} style={{ color: '#8b1a1a' }}>{t.cookies.policy}</Link>
           </p>
           <div style={{ display: 'flex', gap: 12 }}>
-            <button onClick={decline} style={declineBtnStyle}>Refuser</button>
-            <button onClick={accept} style={acceptBtnStyle}>Accepter</button>
+            <button onClick={decline} style={declineBtnStyle}>{t.cookies.decline}</button>
+            <button onClick={accept} style={acceptBtnStyle}>{t.cookies.accept}</button>
           </div>
         </motion.div>
       )}
