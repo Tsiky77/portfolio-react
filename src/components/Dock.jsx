@@ -89,7 +89,7 @@ export default function Dock({ page, goTo }) {
           margin: 0 auto;
           pointer-events: auto;
           background: rgba(255, 252, 245, 0.82);
-          border: 1px solid rgba(20, 33, 61, 0.1);
+          border: 1px solid rgba(59, 21, 25, 0.1);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
           backdrop-filter: saturate(180%) blur(18px);
           -webkit-backdrop-filter: saturate(180%) blur(18px);
@@ -116,13 +116,13 @@ export default function Dock({ page, goTo }) {
           padding: 0;
           background: none;
           border: 0;
-          color: #14213d;
+          color: #3b1519;
           font-size: 17px;
           font-weight: 700;
           letter-spacing: -0.45px;
         }
         .site-navigation__role {
-          color: #5f6680;
+          color: #7a5a5c;
           font-size: 12px;
           font-weight: 500;
           letter-spacing: -0.1px;
@@ -138,14 +138,14 @@ export default function Dock({ page, goTo }) {
           border: 0;
           border-radius: 9px;
           background: transparent;
-          color: #4a5470;
+          color: #5e3c3f;
           font-size: 13px;
           line-height: 1;
           transition: background 0.18s ease, color 0.18s ease;
         }
         .site-navigation__link:hover,
         .site-navigation__link.is-active {
-          background: #14213d;
+          background: #3b1519;
           color: #fffcf5;
         }
         .site-navigation__cv,
@@ -155,7 +155,7 @@ export default function Dock({ page, goTo }) {
           justify-content: center;
           gap: 7px;
           border-radius: 10px;
-          background: #1f3a6e;
+          background: #8b1a1a;
           color: #fffcf5;
           font-size: 13px;
           font-weight: 600;
@@ -178,7 +178,7 @@ export default function Dock({ page, goTo }) {
             width: 38px;
             height: 38px;
             margin-left: auto;
-            border: 1px solid #dcd2bf;
+            border: 1px solid #e2c5bf;
             border-radius: 10px;
             background: #fffcf5;
           }
@@ -186,7 +186,7 @@ export default function Dock({ page, goTo }) {
             width: 16px;
             height: 1.5px;
             border-radius: 2px;
-            background: #14213d;
+            background: #3b1519;
             transition: transform 0.18s ease;
           }
           .site-navigation__mobile-menu {
@@ -205,12 +205,12 @@ export default function Dock({ page, goTo }) {
             border: 0;
             border-radius: 10px;
             background: transparent;
-            color: #14213d;
+            color: #3b1519;
             font: 600 15px/1 inherit;
             text-align: left;
             cursor: pointer;
           }
-          .site-navigation__mobile-link.is-active { background: #e8ecf4; color: #1f3a6e; }
+          .site-navigation__mobile-link.is-active { background: #fbe4e6; color: #8b1a1a; }
           .site-navigation__mobile-cv { margin-top: 4px; padding: 13px; }
         }
         @media (max-width: 430px) {

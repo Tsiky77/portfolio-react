@@ -6,8 +6,8 @@ export default function FormationSection() {
   const [activeTab, setActiveTab] = useState('L2');
 
   return (
-    <section style={{ background: '#f5efe2', padding: '96px 22px', textAlign: 'center' }}>
-      <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#6b7086', textTransform: 'uppercase' }}>
+    <section style={{ background: '#fbe9e7', padding: '96px 22px', textAlign: 'center' }}>
+      <p style={{ margin: '0 0 10px', fontSize: 14, fontWeight: 600, letterSpacing: '-0.224px', color: '#86696a', textTransform: 'uppercase' }}>
         Formation
       </p>
       
@@ -16,7 +16,7 @@ export default function FormationSection() {
         display: 'flex', 
         justifyContent: 'center', 
         margin: '24px auto 48px', 
-        background: '#ebe3d3', 
+        background: '#f3dcd9', 
         padding: 4, 
         borderRadius: 20, 
         width: 'fit-content' 
@@ -32,7 +32,7 @@ export default function FormationSection() {
             cursor: 'pointer',
             fontSize: 14,
             fontWeight: 600,
-            color: activeTab === 'L2' ? '#14213d' : '#6b7086',
+            color: activeTab === 'L2' ? '#3b1519' : '#86696a',
             transition: 'all 0.2s ease',
             fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif"
           }}
@@ -50,7 +50,7 @@ export default function FormationSection() {
             cursor: 'pointer',
             fontSize: 14,
             fontWeight: 600,
-            color: activeTab === 'CESI' ? '#14213d' : '#6b7086',
+            color: activeTab === 'CESI' ? '#3b1519' : '#86696a',
             transition: 'all 0.2s ease',
             fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif"
           }}
@@ -62,22 +62,22 @@ export default function FormationSection() {
       {/* CONTENU ONGLET 1 : L2 EEA */}
       {activeTab === 'L2' && (
         <div style={{ animation: 'fadeIn 0.3s ease-in-out' }}>
-          <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#14213d' }}>
+          <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#3b1519' }}>
             Université Paul Sabatier, Toulouse.
           </h2>
-          <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#14213d' }}>
+          <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#3b1519' }}>
             Licence L2 EEA en CUPGE : Classe Universitaire Préparatoire aux Grandes Écoles, en Électronique, Énergie Électrique et Automatique.
           </p>
 
-          <div style={{ maxWidth: 640, margin: '48px auto 0', background: '#fffcf5', border: '1px solid #e6dccb', borderRadius: 18, padding: 32, textAlign: 'left', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
-            <p style={{ margin: '0 0 8px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#1f3a6e', textTransform: 'uppercase' }}>Programme en cours</p>
-            <h3 style={{ margin: '0 0 12px', fontSize: 20, fontWeight: 600, letterSpacing: '-0.374px', color: '#14213d' }}>
+          <div style={{ maxWidth: 640, margin: '48px auto 0', background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: 32, textAlign: 'left', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+            <p style={{ margin: '0 0 8px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#8b1a1a', textTransform: 'uppercase' }}>Programme en cours</p>
+            <h3 style={{ margin: '0 0 12px', fontSize: 20, fontWeight: 600, letterSpacing: '-0.374px', color: '#3b1519' }}>
               Électronique, Énergie Électrique, Automatique (EEA)
             </h3>
-            <p style={{ margin: '0 0 16px', fontSize: 15, lineHeight: 1.5, letterSpacing: '-0.224px', color: '#2b3550' }}>
+            <p style={{ margin: '0 0 16px', fontSize: 15, lineHeight: 1.5, letterSpacing: '-0.224px', color: '#4a2a2d' }}>
               Formation intégrée au programme CUPGE (Classe Universitaire Préparatoire aux Grandes Écoles) de l’Université Paul Sabatier de Toulouse, dès la rentrée de septembre 2026. Un socle scientifique solide, d’un niveau équivalent à celui d’une classe préparatoire classique.
             </p>
-            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, color: '#6b7086' }}>
+            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, color: '#86696a' }}>
               Spécialisation prévue en systèmes embarqués, traitement du signal et informatique industrielle.
             </p>
           </div>
@@ -107,42 +107,42 @@ export default function FormationSection() {
       {/* CONTENU ONGLET 2 : CESI TOULOUSE */}
       {activeTab === 'CESI' && (
         <div style={{ animation: 'fadeIn 0.3s ease-in-out' }}>
-          <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#14213d' }}>
+          <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#3b1519' }}>
             CESI École d'Ingénieurs.
           </h2>
-          <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#14213d' }}>
+          <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#3b1519' }}>
             Cycle préparatoire intégré, spécialité Systèmes Électriques et Électroniques Embarqués (S3E).
           </p>
 
           {/* Cartes de compétences CESI */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 20, maxWidth: 980, margin: '48px auto 0', textAlign: 'left' }}>
             {formationCards.map((c) => (
-              <div key={c.titre} style={{ background: '#fffcf5', border: '1px solid #e6dccb', borderRadius: 18, padding: 24 }}>
-                <h3 style={{ margin: '0 0 8px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#14213d' }}>{c.titre}</h3>
-                <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#2b3550' }}>{c.desc}</p>
+              <div key={c.titre} style={{ background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: 24 }}>
+                <h3 style={{ margin: '0 0 8px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#3b1519' }}>{c.titre}</h3>
+                <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#4a2a2d' }}>{c.desc}</p>
               </div>
             ))}
           </div>
 
-          <h3 style={{ margin: '64px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 600, lineHeight: 1.14, color: '#14213d' }}>
+          <h3 style={{ margin: '64px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 600, lineHeight: 1.14, color: '#3b1519' }}>
             Matières abordées, semestre par semestre.
           </h3>
           
           {/* Grille des semestres */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 20, maxWidth: 980, margin: '32px auto 0', textAlign: 'left' }}>
             {semesters.map((s) => (
-              <div key={s.label} style={{ background: '#fffcf5', border: '1px solid #e6dccb', borderRadius: 18, padding: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 10, overflow: 'hidden' }}>
+              <div key={s.label} style={{ background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 10, overflow: 'hidden' }}>
                 <div style={{ width: '100%', aspectRatio: '16/9', margin: '0 0 4px' }}>
                   <img src={s.photo} alt={s.label} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
-                <p style={{ margin: 0, padding: '0 24px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#1f3a6e', textTransform: 'uppercase' }}>{s.label}</p>
-                <ul style={{ margin: 0, padding: '0 24px 0 42px', display: 'flex', flexDirection: 'column', gap: 6, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#2b3550' }}>
+                <p style={{ margin: 0, padding: '0 24px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#8b1a1a', textTransform: 'uppercase' }}>{s.label}</p>
+                <ul style={{ margin: 0, padding: '0 24px 0 42px', display: 'flex', flexDirection: 'column', gap: 6, fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#4a2a2d' }}>
                   {s.topics.map((t) => (
                     <li key={t}>{t}</li>
                   ))}
                 </ul>
-                <p style={{ margin: '4px 24px 0', fontSize: 11, color: '#9a9585' }}>
-                  <a href={s.creditHref} target="_blank" rel="noopener noreferrer" style={{ color: '#9a9585' }}>{s.credit}</a>
+                <p style={{ margin: '4px 24px 0', fontSize: 11, color: '#a8918f' }}>
+                  <a href={s.creditHref} target="_blank" rel="noopener noreferrer" style={{ color: '#a8918f' }}>{s.credit}</a>
                 </p>
               </div>
             ))}
@@ -155,7 +155,7 @@ export default function FormationSection() {
                 <div style={{ width: '100%', aspectRatio: '4/3' }}>
                   <img src={im.src} alt={im.cap} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 18, display: 'block' }} />
                 </div>
-                <figcaption style={{ fontSize: 12, letterSpacing: '-0.12px', color: '#6b7086', textAlign: 'center' }}>{im.cap}</figcaption>
+                <figcaption style={{ fontSize: 12, letterSpacing: '-0.12px', color: '#86696a', textAlign: 'center' }}>{im.cap}</figcaption>
               </figure>
             ))}
           </div>
