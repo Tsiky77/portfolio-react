@@ -10,19 +10,19 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" style={{ background: '#ffffff', padding: '96px 22px', textAlign: 'center' }}>
-      <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#1d1d1f' }}>
+    <section id="contact" style={{ background: '#fffcf5', padding: '96px 22px', textAlign: 'center' }}>
+      <h2 style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#14213d' }}>
         Travaillons ensemble.
       </h2>
-      <p style={{ margin: '14px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 400, lineHeight: 1.14, letterSpacing: '0.196px', color: '#1d1d1f' }}>
+      <p style={{ margin: '14px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 400, lineHeight: 1.14, letterSpacing: '0.196px', color: '#14213d' }}>
         Étudiant en Licence L2 EEA (CUPGE), ouvert aux opportunités en systèmes embarqués et développement logiciel.
       </p>
       <div style={{ display: 'flex', gap: 16, justifyContent: 'center', marginTop: 32, flexWrap: 'wrap' }}>
         <a href={`mailto:${EMAIL}`} style={primaryPillStyle}>{EMAIL}</a>
         <a href={`tel:${PHONE_HREF}`} style={outlinePillStyle}>{PHONE_DISPLAY}</a>
       </div>
-      <form onSubmit={sendMessage} style={{ maxWidth: 560, margin: '48px auto 0', background: '#ffffff', border: '1px solid #e0e0e0', borderRadius: 18, padding: 32, display: 'grid', gap: 16, textAlign: 'left' }}>
-        <p style={{ margin: '0 0 4px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#1d1d1f' }}>Envoyer un message</p>
+      <form onSubmit={sendMessage} style={{ maxWidth: 560, margin: '48px auto 0', background: '#fffcf5', border: '1px solid #e6dccb', borderRadius: 18, padding: 32, display: 'grid', gap: 16, textAlign: 'left' }}>
+        <p style={{ margin: '0 0 4px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#14213d' }}>Envoyer un message</p>
         <input name="nom" required placeholder="Votre nom" style={inputStyle} />
         <input name="email" type="email" required placeholder="Votre e-mail" style={inputStyle} />
         <textarea name="message" required rows={5} placeholder="Votre message" style={textareaStyle} />
@@ -32,8 +32,8 @@ export default function ContactSection() {
   );
 }
 
-const primaryPillStyle = { background: '#0066cc', color: '#ffffff', fontSize: 17, letterSpacing: '-0.374px', padding: '11px 22px', borderRadius: 9999, textDecoration: 'none' };
-const outlinePillStyle = { background: 'transparent', color: '#0066cc', border: '1px solid #0066cc', fontSize: 17, letterSpacing: '-0.374px', padding: '11px 22px', borderRadius: 9999, textDecoration: 'none' };
-const inputStyle = { fontFamily: 'inherit', fontSize: 17, letterSpacing: '-0.374px', color: '#1d1d1f', background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: 9999, padding: '12px 20px', height: 44, boxSizing: 'border-box', outline: 'none' };
-const textareaStyle = { fontFamily: 'inherit', fontSize: 17, lineHeight: 1.47, letterSpacing: '-0.374px', color: '#1d1d1f', background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: 18, padding: '14px 20px', resize: 'vertical', outline: 'none' };
-const submitStyle = { fontFamily: 'inherit', background: '#0066cc', color: '#ffffff', fontSize: 17, letterSpacing: '-0.374px', padding: '11px 22px', borderRadius: 9999, border: 'none', cursor: 'pointer', justifySelf: 'start' };
+const primaryPillStyle = { background: '#1f3a6e', color: '#fffcf5', fontSize: 17, letterSpacing: '-0.374px', padding: '11px 22px', borderRadius: 9999, textDecoration: 'none' };
+const outlinePillStyle = { background: 'transparent', color: '#1f3a6e', border: '1px solid #1f3a6e', fontSize: 17, letterSpacing: '-0.374px', padding: '11px 22px', borderRadius: 9999, textDecoration: 'none' };
+const inputStyle = { fontFamily: 'inherit', fontSize: 17, letterSpacing: '-0.374px', color: '#14213d', background: '#fffcf5', border: '1px solid rgba(0,0,0,0.08)', borderRadius: 9999, padding: '12px 20px', height: 44, boxSizing: 'border-box', outline: 'none' };
+const textareaStyle = { fontFamily: 'inherit', fontSize: 17, lineHeight: 1.47, letterSpacing: '-0.374px', color: '#14213d', background: '#fffcf5', border: '1px solid rgba(0,0,0,0.08)', borderRadius: 18, padding: '14px 20px', resize: 'vertical', outline: 'none' };
+const submitStyle = { fontFamily: 'inherit', background: '#1f3a6e', color: '#fffcf5', fontSize: 17, letterSpacing: '-0.374px', padding: '11px 22px', borderRadius: 9999, border: 'none', cursor: 'pointer', justifySelf: 'start' };

@@ -6,17 +6,17 @@ export default function Legal() {
 
   return (
     <>
-      <nav style={{ position: 'sticky', top: 0, zIndex: 50, background: '#000000', height: 44, display: 'flex', alignItems: 'center' }}>
+      <nav style={{ position: 'sticky', top: 0, zIndex: 50, background: '#14213d', height: 44, display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%', maxWidth: 980, margin: '0 auto', padding: '0 22px', boxSizing: 'border-box' }}>
-          <Link to="/" style={{ color: '#ffffff', fontSize: 14, fontWeight: 600, letterSpacing: '-0.12px', textDecoration: 'none' }}>← Tsiky A.</Link>
+          <Link to="/" style={{ color: '#fffcf5', fontSize: 14, fontWeight: 600, letterSpacing: '-0.12px', textDecoration: 'none' }}>← Tsiky A.</Link>
         </div>
       </nav>
-      <section style={{ background: '#ffffff', padding: '80px 22px 96px' }}>
+      <section style={{ background: '#fffcf5', padding: '80px 22px 96px' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
-          <h1 style={{ margin: '0 0 8px', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#1d1d1f' }}>
+          <h1 style={{ margin: '0 0 8px', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 600, lineHeight: 1.1, color: '#14213d' }}>
             Mentions légales & confidentialité.
           </h1>
-          <p style={{ margin: '0 0 48px', fontSize: 14, letterSpacing: '-0.224px', color: '#7a7a7a' }}>Dernière mise à jour : {year}</p>
+          <p style={{ margin: '0 0 48px', fontSize: 14, letterSpacing: '-0.224px', color: '#6b7086' }}>Dernière mise à jour : {year}</p>
 
           <LegalBlock title="1. Éditeur du site">
             <p style={pStyle}>Tsiky Andrianarisata</p>
@@ -81,11 +81,11 @@ export default function Legal() {
 function LegalBlock({ title, children }) {
   return (
     <div style={{ marginBottom: 32 }}>
-      <h3 style={{ margin: '0 0 8px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#1d1d1f' }}>{title}</h3>
+      <h3 style={{ margin: '0 0 8px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#14213d' }}>{title}</h3>
       {children}
     </div>
   );
 }
 
-const pStyle = { margin: '0 0 4px', fontSize: 15, lineHeight: 1.6, color: '#333333' };
-const linkStyle = { color: '#0066cc' };
+const pStyle = { margin: '0 0 4px', fontSize: 15, lineHeight: 1.6, color: '#2b3550' };
+const linkStyle = { color: '#1f3a6e' };
