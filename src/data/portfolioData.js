@@ -14,32 +14,42 @@ export const experiences = [
   {
     label: 'ONERA',
     titre: "Stagiaire Développeur Python : interface graphique et visualisation scientifique",
-    meta: "ONERA, Département Physique (DPHY), Toulouse · avril à juin 2026",
+    meta: "ONERA, Département Physique (DPHY), Toulouse · 8 juin au 27 juillet 2026",
+    chiffres: [
+      { valeur: '≈ 9 700', label: 'lignes de code (Python, JavaScript, HTML)' },
+      { valeur: '< 1 %', label: "d'écart avec le workflow historique" },
+      { valeur: 'FR · EN', label: 'interface bilingue' },
+    ],
     details: [
       {
         titre: 'Contexte et objectif',
-        texte: "Développement d'une interface graphique pour CSiPI, un code de simulation Monte Carlo utilisé pour étudier l'érosion par pulvérisation ionique dans le cadre de la propulsion électrique spatiale. L'objectif était de rendre les calculs plus accessibles aux chercheurs, de la préparation d'un cas de simulation à l'analyse des résultats.",
+        texte: "Les chercheurs de l'ONERA utilisent CSiPI, un code de simulation qui se pilotait jusqu'ici uniquement en ligne de commande. Ma mission : concevoir une interface graphique qui rende cet outil accessible, de la préparation d'un cas de simulation jusqu'à l'affichage des résultats.",
       },
       {
-        titre: 'Interface et visualisation scientifique',
-        texte: "Conception d'une application complète en Python, Eel, HTML et JavaScript. Mise en place de formulaires de configuration pour les paramètres physiques, de graphiques interactifs avec Plotly et de visualisations 3D afin de faciliter l'interprétation des résultats.",
+        titre: 'Architecture de l’interface',
+        texte: "Une interface web (HTML, JavaScript, Bootstrap, Plotly.js) reliée à une couche applicative en Python par Eel, via WebSocket. Le code de calcul existant reste intact : l'interface prépare la configuration, lance la simulation et lit les fichiers de résultats pour les afficher.",
       },
       {
-        titre: 'Gestion des simulations',
-        texte: "Mise en œuvre d'une architecture permettant de lancer plusieurs simulations en parallèle, avec isolation des jobs, suivi de leur progression en temps réel et gestion robuste des processus. Les paramètres et résultats sont structurés en YAML et JSON pour assurer leur traçabilité.",
+        titre: 'Simulations en parallèle, isolées et suivies en temps réel',
+        texte: "Chaque simulation tourne dans son propre bac à sable pour que les résultats ne se mélangent jamais. Un sémaphore limite le nombre de calculs simultanés et place les autres en file d'attente. La progression et le journal remontent en direct dans le navigateur, et un arrêt ne laisse aucun processus orphelin.",
       },
       {
-        titre: "Industrialisation de l'outil",
-        texte: "Développement d'une application portable sous Linux (RHEL) et Windows, avec génération automatique de rapports PDF. Travail sur la fluidité de l'IHM et l'optimisation des flux de données pour conserver une expérience réactive, même avec de nombreux paramètres de simulation.",
+        titre: 'Fiabilité des saisies',
+        texte: "Les valeurs saisies dans un formulaire arrivent toujours sous forme de texte, alors que la simulation attend des types stricts. J'ai écrit un validateur orienté objet qui contrôle et convertit toute la configuration avant le lancement, et signale clairement chaque erreur à l'utilisateur.",
       },
       {
-        titre: 'Collaboration et validation',
-        texte: "Échanges réguliers avec les chercheurs du département de physique (DPHY/CSE) pour recueillir les besoins, tester les fonctionnalités et valider les résultats. Rédaction d'un rapport technique complet et présentation du travail devant un jury.",
+        titre: 'Tests et validation',
+        texte: "Plusieurs cas de référence ont été lancés à la fois par l'ancien workflow en ligne de commande et par l'interface, puis comparés automatiquement. Critère d'acceptation : un écart relatif inférieur à 1 % sur tous les résultats, pour garantir que l'interface ne modifie rien.",
+      },
+      {
+        titre: 'Déploiement et transmission',
+        texte: "Application portable sous Linux (RHEL) et Windows, installable sans droits administrateur, avec une version exécutable autonome générée par PyInstaller. J'ai rédigé un manuel utilisateur et un guide développeur complet pour que l'outil reste maintenable après mon départ, puis présenté le travail devant un jury.",
       },
     ],
     images: [
-      { src: `${BASE}assets/onera-configuration.png`, cap: "Onglet Configuration : paramétrage de la simulation (particule incidente, cible)" },
+      { src: `${BASE}assets/onera-configuration.png`, cap: "Onglet Configuration : formulaire de paramétrage d’une simulation" },
       { src: `${BASE}assets/onera-simulations.png`, cap: "Gestion des simulations concurrentes avec suivi de progression en temps réel" },
+      { src: `${BASE}assets/onera-cycle-job.png`, cap: "Cycle de vie d'une simulation : file d'attente, exécution, succès, échec ou arrêt", diagramme: true },
     ],
   },
   {

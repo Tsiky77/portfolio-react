@@ -20,6 +20,17 @@ export default function ExperienceSection({ expIndex, setExpIndex }) {
       <p style={{ margin: '40px 0 0', fontSize: 21, fontWeight: 600, letterSpacing: '0.231px', color: '#fffcf5' }}>{exp.titre}</p>
       <p style={{ margin: '8px 0 0', fontSize: 14, letterSpacing: '-0.224px', color: '#f0d6d6' }}>{exp.meta}</p>
       
+      {exp.chiffres && (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: 14, maxWidth: 720, margin: '32px auto 0' }}>
+          {exp.chiffres.map((c) => (
+            <div key={c.label} style={{ padding: '18px 16px', borderRadius: 16, border: '1px solid #6b2a30', background: 'rgba(255, 252, 245, 0.04)' }}>
+              <p style={{ margin: 0, fontSize: 28, fontWeight: 700, letterSpacing: '-0.04em', color: '#f4a9b4' }}>{c.valeur}</p>
+              <p style={{ margin: '6px 0 0', fontSize: 13, lineHeight: 1.4, color: '#f0d6d6' }}>{c.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
       <div style={{ maxWidth: 720, margin: '32px auto 0', textAlign: 'left', display: 'grid', gap: 20 }}>
         {/* Si l'expérience utilise des paragraphes classiques */}
         {exp.paras && exp.paras.map((pa, i) => (
@@ -45,7 +56,7 @@ export default function ExperienceSection({ expIndex, setExpIndex }) {
               <div
                 role="img"
                 aria-label={im.cap}
-                style={{ width: '100%', aspectRatio: '1119/644', backgroundImage: `url("${im.src}")`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: 8, boxShadow: 'rgba(0,0,0,0.22) 3px 5px 30px 0' }}
+                style={{ width: '100%', aspectRatio: '1119/644', backgroundImage: `url("${im.src}")`, backgroundSize: im.diagramme ? 'contain' : 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundColor: im.diagramme ? '#ffffff' : 'transparent', borderRadius: 8, boxShadow: 'rgba(0,0,0,0.22) 3px 5px 30px 0' }}
               />
               <figcaption style={{ fontSize: 12, letterSpacing: '-0.12px', color: '#f0d6d6', textAlign: 'center' }}>{im.cap}</figcaption>
             </figure>
