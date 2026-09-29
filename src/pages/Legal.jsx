@@ -20,7 +20,7 @@ export default function Legal() {
 
           <LegalBlock title="1. Éditeur du site">
             <p style={pStyle}>Tsiky Andrianarisata</p>
-            <p style={pStyle}>Étudiant — CESI Toulouse, France</p>
+            <p style={pStyle}>Étudiant CESI Toulouse, France</p>
             <p style={pStyle}>Contact : <a href={`mailto:${EMAIL}`} style={linkStyle}>{EMAIL}</a></p>
           </LegalBlock>
 
