@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { formationCards, formationImages, licenceCourseGroups, semesters } from '../../data/portfolioData';
+import { formationCards, formationImages, licenceSubjects, semesters } from '../../data/portfolioData';
 
 export default function FormationSection() {
   // État pour gérer l'onglet actif ('L2' ou 'CESI')
@@ -86,17 +86,13 @@ export default function FormationSection() {
             <div className="licence-courses__heading">
               <p className="apple-eyebrow">Programme</p>
               <h3>Les enseignements abordés.</h3>
-              <p>Un cursus articulé autour de l’électronique, de l’automatique, de l’énergie et de l’informatique industrielle.</p>
+              <p>Trois matières qui structurent ma formation et renforcent mon socle scientifique.</p>
             </div>
             <div className="licence-courses__grid">
-              {licenceCourseGroups.map((group) => (
-                <article key={group.label} className="licence-courses__group">
-                  <h4>{group.label}</h4>
-                  <ul>
-                    {group.courses.map(([code, name]) => (
-                      <li key={`${code}-${name}`}><code>{code}</code><span>{name}</span></li>
-                    ))}
-                  </ul>
+              {licenceSubjects.map((subject) => (
+                <article key={subject.titre} className="licence-courses__group">
+                  <h4>{subject.titre}</h4>
+                  <p>{subject.texte}</p>
                 </article>
               ))}
             </div>

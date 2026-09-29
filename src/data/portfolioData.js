@@ -149,44 +149,18 @@ export const formationCards = [
   { titre: 'Méthode PBL', desc: 'Apprentissage par problèmes : travail en équipe à partir d’un cas concret, analyse du besoin, recherche de solutions, prototypage puis restitution et retour d’expérience.' },
 ];
 
-export const licenceCourseGroups = [
+export const licenceSubjects = [
   {
-    label: 'Enseignements communs · S1 & S2',
-    courses: [
-      ['KEAFA02U', 'Automatique 2'],
-      ['KEAFA03U', 'Informatique industrielle'],
-      ['KEAFE02U', 'Électromagnétisme'],
-      ['KEAFE03U', 'Énergie électrique 3'],
-      ['KEAFE03U', 'Machine électrique 4'],
-      ['KEAFF06U', 'Mathématiques · Fonctions & calcul 3'],
-      ['KEAFF07U', 'Mathématiques · Fonctions & calcul 4'],
-      ['KEAFN01U', 'Électronique · Initiation à l’analogique'],
-      ['KEAFN02U', 'Électronique · Fonctions de l’analogique'],
-      ['KEAFO01U', 'Outils numériques 1 pour l’EEA'],
-      ['KEAFO02U', 'Outils numériques 2 pour l’EEA'],
-      ['KEAFS01U', 'Introduction au traitement du signal et de l’image'],
-      ['KLANE20U', 'Anglais · Ethical Issues'],
-      ['KLANG20U', 'Anglais · Going Abroad'],
-      ['KLANS20U', 'Anglais · Science in Fiction'],
-    ],
+    titre: 'Électronique',
+    texte: "Je revois en profondeur les circuits électriques et les filtres : lois de Kirchhoff, régimes transitoires, fonctions de transfert et diagrammes de Bode. Cette matière me donne les bases pour concevoir et analyser les montages que j'utilise ensuite dans mes projets embarqués.",
   },
   {
-    label: 'Premier semestre',
-    courses: [
-      ['KEAFB07U', 'Thermique'],
-      ['KEAFB08U', 'Outils électriques pour l’électronique'],
-      ['KEAFZ30U', 'Connaissance de l’entreprise'],
-      ['KLTUT10U', 'Langue · Tutorat CRL1'],
-      ['KEAIS01U', 'Biophysique pour le soin et la santé'],
-    ],
+    titre: 'Thermodynamique',
+    texte: "J'y étudie les différents phénomènes qui interviennent dans les échanges d'énergie : transferts de chaleur, premier et second principe, bilans énergétiques. C'est essentiel pour comprendre l'échauffement des composants et le rendement des systèmes électriques.",
   },
   {
-    label: 'Second semestre',
-    courses: [
-      ['KEAFN03U', 'Électronique numérique'],
-      ['KEAXPT10', 'Projet transversal EEA'],
-      ['KEAIS02U', 'Dispositifs médicaux et imagerie'],
-    ],
+    titre: 'Électromagnétisme',
+    texte: "Cette matière me permet de comprendre ce qui se passe physiquement à l'intérieur des circuits électriques : champs électrique et magnétique, induction, propagation. Elle fait le lien entre la théorie et le fonctionnement réel des bobines, des moteurs et des transformateurs.",
   },
 ];
 
