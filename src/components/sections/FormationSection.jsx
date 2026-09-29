@@ -66,7 +66,7 @@ export default function FormationSection() {
             Université Paul Sabatier, Toulouse.
           </h2>
           <p style={{ margin: '14px auto 0', maxWidth: 640, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 24, fontWeight: 300, lineHeight: 1.5, color: '#14213d' }}>
-            Licence L2 EEA: Électronique, Énergie Électrique et Automatique dans le Cursus Universitaire Préparatoire aux Grandes Écoles (CUPGE).
+            Licence L2 EEA en CUPGE : Classe Universitaire Préparatoire aux Grandes Écoles, en Électronique, Énergie Électrique et Automatique.
           </p>
 
           <div style={{ maxWidth: 640, margin: '48px auto 0', background: '#fffcf5', border: '1px solid #e6dccb', borderRadius: 18, padding: 32, textAlign: 'left', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
@@ -75,7 +75,7 @@ export default function FormationSection() {
               Électronique, Énergie Électrique, Automatique (EEA)
             </h3>
             <p style={{ margin: '0 0 16px', fontSize: 15, lineHeight: 1.5, letterSpacing: '-0.224px', color: '#2b3550' }}>
-              Nouvelle formation intégrant le programme CUPGE (Cursus Universitaire Préparatoire aux Grandes Écoles) à l'Université Paul Sabatier de Toulouse dès la rentrée de septembre 2026.
+              Formation intégrée au programme CUPGE (Classe Universitaire Préparatoire aux Grandes Écoles) de l’Université Paul Sabatier de Toulouse, dès la rentrée de septembre 2026. Un socle scientifique solide, d’un niveau équivalent à celui d’une classe préparatoire classique.
             </p>
             <p style={{ margin: 0, fontSize: 14, lineHeight: 1.43, color: '#6b7086' }}>
               Spécialisation prévue en systèmes embarqués, traitement du signal et informatique industrielle.

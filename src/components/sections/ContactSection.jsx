@@ -4,7 +4,7 @@ export default function ContactSection() {
   function sendMessage(e) {
     e.preventDefault();
     const f = new FormData(e.target);
-    const subject = encodeURIComponent('Contact portfolio — ' + f.get('nom'));
+    const subject = encodeURIComponent('Contact portfolio : ' + f.get('nom'));
     const body = encodeURIComponent(f.get('message') + '\n\n' + f.get('nom') + ' · ' + f.get('email'));
     window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
   }

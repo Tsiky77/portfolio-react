@@ -25,7 +25,7 @@ export default function Legal() {
           </LegalBlock>
 
           <LegalBlock title="2. Hébergement">
-            <p style={pStyle}>GitHub Pages — GitHub, Inc.</p>
+            <p style={pStyle}>GitHub Pages, GitHub, Inc.</p>
             <p style={pStyle}>88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</p>
             <p style={pStyle}>
               <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" style={linkStyle} target="_blank" rel="noopener noreferrer">
