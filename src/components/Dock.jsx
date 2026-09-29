@@ -36,7 +36,7 @@ export default function Dock({ page, goTo }) {
         </nav>
 
         <label className="site-navigation__lang">
-          <span className="site-navigation__lang-sr">{t.navAria.language}</span>
+          <span aria-hidden="true">{lang.toUpperCase()}</span>
           <select value={lang} onChange={(e) => setLang(e.target.value)} aria-label={t.navAria.language}>
             {LANGUAGES.map((l) => (
               <option key={l.code} value={l.code}>{l.label} · {l.name}</option>
@@ -169,21 +169,29 @@ export default function Dock({ page, goTo }) {
           white-space: nowrap;
         }
         .site-navigation__cv { padding: 11px 13px; }
-        .site-navigation__lang { position: relative; flex: none; }
-        .site-navigation__lang-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-        .site-navigation__lang select {
-          width: 58px;
+        .site-navigation__lang {
+          position: relative;
+          flex: none;
+          display: inline-flex;
+          align-items: center;
           height: 36px;
-          padding: 0 20px 0 10px;
+          padding: 0 26px 0 11px;
           border: 1px solid #e2c5bf;
           border-radius: 10px;
-          background: #fffcf5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%233b1519' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 8px center;
+          background: #fffcf5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%233b1519' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center;
           color: #3b1519;
-          font: 600 12px/1 inherit;
+          font-size: 12px;
+          font-weight: 600;
           cursor: pointer;
-          appearance: none;
-          -webkit-appearance: none;
-          text-overflow: clip;
+        }
+        .site-navigation__lang:focus-within { outline: 3px solid rgba(139, 26, 26, .45); outline-offset: 2px; }
+        .site-navigation__lang select {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          opacity: 0;
+          cursor: pointer;
+          font-size: 16px;
         }
         .site-navigation__menu-button { display: none; }
         .site-navigation__mobile-menu { display: none; }
