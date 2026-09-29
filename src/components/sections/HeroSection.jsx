@@ -15,11 +15,11 @@ export default function HeroSection({ goTo }) {
           Étudiant en Licence L2 EEA Électronique, Énergie Électrique et Automatique (CUPGE) 
         </p>
         <div className="apple-hero__actions">
-          <a href={CV_PATH} download className="apple-button apple-button--primary">Télécharger le CV <span aria-hidden="true">↓</span></a>
+          <a href={CV_PATH} download className="apple-button apple-button--primary">Télécharger mon CV (PDF) <span aria-hidden="true">↓</span></a>
           <button type="button" onClick={() => goTo('contact')} className="apple-button apple-button--quiet">Me contacter <span aria-hidden="true">→</span></button>
         </div>
         <div className="apple-hero__availability">
-          <span aria-hidden="true" /> À la recherche d’une expérience professionnelle dans le cadre de mon parcours académique
+          <span aria-hidden="true" /> Recherche un stage de 2 mois en systèmes embarqués à partir de juin 2027
         </div>
       </div>
       <div className="apple-hero__stage" aria-hidden="true">

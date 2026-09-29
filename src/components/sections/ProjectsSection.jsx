@@ -26,7 +26,20 @@ export default function ProjectsSection({ filtre, setFiltre }) {
             </div>
             <span style={{ padding: '0 24px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#8b1a1a', textTransform: 'uppercase' }}>{p.tag}</span>
             <h3 style={{ margin: 0, padding: '0 24px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#3b1519' }}>{p.titre}</h3>
-            <p style={{ margin: 0, padding: '0 24px', fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#4a2a2d' }}>{p.desc}</p>
+            <dl style={{ margin: '4px 0 0', padding: '0 24px', display: 'grid', gap: 10 }}>
+              {[['Problème', p.probleme], ['Solution', p.solution], ['Résultat', p.resultat]].map(([label, texte]) => (
+                <div key={label}>
+                  <dt style={{ fontSize: 11, fontWeight: 700, letterSpacing: '.04em', textTransform: 'uppercase', color: '#a8434b' }}>{label}</dt>
+                  <dd style={{ margin: '2px 0 0', fontSize: 14, lineHeight: 1.43, letterSpacing: '-0.224px', color: '#4a2a2d' }}>{texte}</dd>
+                </div>
+              ))}
+            </dl>
+            {(p.github || p.video) && (
+              <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', padding: '4px 24px 0' }}>
+                {p.github && <a href={p.github} target="_blank" rel="noopener noreferrer" style={projectLinkStyle}>Code source ↗</a>}
+                {p.video && <a href={p.video} target="_blank" rel="noopener noreferrer" style={projectLinkStyle}>Voir la vidéo ▶</a>}
+              </div>
+            )}
             {p.imgCredit && (
               <p style={{ margin: 0, padding: '0 24px', fontSize: 11, color: '#a8918f' }}>
                 <a href={p.imgCreditHref} target="_blank" rel="noopener noreferrer" style={{ color: '#a8918f' }}>{p.imgCredit}</a>
@@ -72,3 +85,4 @@ export default function ProjectsSection({ filtre, setFiltre }) {
 const filterBase = { fontFamily: 'inherit', fontSize: 14, letterSpacing: '-0.224px', padding: '10px 18px', borderRadius: 9999, cursor: 'pointer', background: '#fffcf5', color: '#3b1519' };
 const filterActiveStyle = { ...filterBase, border: '2px solid #6e1212', fontWeight: 600 };
 const filterInactiveStyle = { ...filterBase, border: '1px solid #ecd6cf', fontWeight: 400 };
+const projectLinkStyle = { fontSize: 13, fontWeight: 600, color: '#8b1a1a', border: '1px solid #ecd6cf', borderRadius: 9999, padding: '6px 12px', textDecoration: 'none' };
