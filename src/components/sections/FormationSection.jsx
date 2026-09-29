@@ -69,7 +69,7 @@ export default function FormationSection() {
             Licence L2 EEA en CUPGE : Classe Universitaire Préparatoire aux Grandes Écoles, en Électronique, Énergie Électrique et Automatique.
           </p>
 
-          <div style={{ maxWidth: 640, margin: '48px auto 0', background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: 32, textAlign: 'left', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
+          <div style={{ maxWidth: 980, margin: '48px auto 0', background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: 32, textAlign: 'left', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
             <p style={{ margin: '0 0 8px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#8b1a1a', textTransform: 'uppercase' }}>Programme en cours</p>
             <h3 style={{ margin: '0 0 12px', fontSize: 20, fontWeight: 600, letterSpacing: '-0.374px', color: '#3b1519' }}>
               Électronique, Énergie Électrique, Automatique (EEA)
@@ -111,7 +111,7 @@ export default function FormationSection() {
           </p>
 
           {/* Cartes de compétences CESI */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 20, maxWidth: 980, margin: '48px auto 0', textAlign: 'left' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,200px),1fr))', gap: 20, maxWidth: 980, margin: '48px auto 0', textAlign: 'left' }}>
             {formationCards.map((c) => (
               <div key={c.titre} style={{ background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: 24 }}>
                 <h3 style={{ margin: '0 0 8px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#3b1519' }}>{c.titre}</h3>
@@ -125,10 +125,10 @@ export default function FormationSection() {
           </h3>
           
           {/* Grille des semestres */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 20, maxWidth: 980, margin: '32px auto 0', textAlign: 'left' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,220px),1fr))', gap: 20, maxWidth: 980, margin: '32px auto 0', textAlign: 'left' }}>
             {semesters.map((s) => (
               <div key={s.label} style={{ background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 10, overflow: 'hidden' }}>
-                <div style={{ width: '100%', aspectRatio: '16/9', margin: '0 0 4px' }}>
+                <div style={{ width: '100%', aspectRatio: '16/9', margin: '0 0 4px', flexShrink: 0 }}>
                   <img src={s.photo} alt={s.label} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <p style={{ margin: 0, padding: '0 24px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#8b1a1a', textTransform: 'uppercase' }}>{s.label}</p>
@@ -137,7 +137,7 @@ export default function FormationSection() {
                     <li key={t}>{t}</li>
                   ))}
                 </ul>
-                <p style={{ margin: '4px 24px 0', fontSize: 11, color: '#a8918f' }}>
+                <p style={{ margin: 'auto 24px 0', paddingTop: 4, fontSize: 11, color: '#a8918f' }}>
                   <a href={s.creditHref} target="_blank" rel="noopener noreferrer" style={{ color: '#a8918f' }}>{s.credit}</a>
                 </p>
               </div>
@@ -145,7 +145,7 @@ export default function FormationSection() {
           </div>
 
           {/* Grille d'images */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 24, maxWidth: 980, margin: '48px auto 0' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,400px),1fr))', gap: 24, maxWidth: 980, margin: '48px auto 0' }}>
             {formationImages.map((im) => (
               <figure key={im.src} style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
                 <div style={{ width: '100%', aspectRatio: '4/3' }}>

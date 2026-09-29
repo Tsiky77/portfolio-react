@@ -15,7 +15,7 @@ export default function SportSection() {
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 18, maxWidth: 980, margin: '48px auto 0' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,220px),1fr))', gap: 18, maxWidth: 980, margin: '48px auto 0' }}>
         {natation.stats.map((stat) => (
           <div key={stat.valeur} style={{ padding: '26px 24px', borderRadius: 20, background: '#3b1519', color: '#fffcf5', textAlign: 'center' }}>
             <p style={{ margin: 0, fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 40, fontWeight: 700, letterSpacing: '-0.05em', lineHeight: 1.05, color: '#f4a9b4' }}>{stat.valeur}</p>
@@ -29,7 +29,7 @@ export default function SportSection() {
           Ce que le bassin m’apporte en ingénierie.
         </h3>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 18, maxWidth: 980, margin: '32px auto 0' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,260px),1fr))', gap: 18, maxWidth: 980, margin: '32px auto 0' }}>
         {natation.atouts.map((atout, index) => (
           <article key={atout.titre} style={{ padding: 24, border: '1px solid #ecd6cf', borderRadius: 20, background: '#fffcf5', boxShadow: '0 10px 30px rgba(0,0,0,0.035)' }}>
             <span style={{ fontSize: 12, fontWeight: 600, color: '#a8918f', letterSpacing: '0.04em' }}>0{index + 1}</span>

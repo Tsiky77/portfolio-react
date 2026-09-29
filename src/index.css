@@ -15,7 +15,8 @@ a:hover { text-decoration: none; }
 button:active, a:active { transform: scale(.975); }
 button:focus-visible, a:focus-visible, input:focus, textarea:focus { outline: 3px solid rgba(139, 26, 26, .45); outline-offset: 3px; }
 
-.portfolio-main { min-height: calc(100svh - 200px); }
+.portfolio-main { display: flex; flex-direction: column; min-height: calc(100svh - 200px); }
+.portfolio-main > section { flex: 1 0 auto; }
 .apple-eyebrow { margin: 0; color: #8b1a1a; font-size: 13px; font-weight: 700; letter-spacing: .055em; text-transform: uppercase; }
 .apple-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 0 19px; border: 1px solid transparent; border-radius: 980px; cursor: pointer; font-size: 16px; font-weight: 600; letter-spacing: -.01em; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
 .apple-button:hover { transform: translateY(-1px); }

@@ -21,11 +21,11 @@ export default function ExperienceSection({ expIndex, setExpIndex }) {
       <p style={{ margin: '8px 0 0', fontSize: 14, letterSpacing: '-0.224px', color: '#f0d6d6' }}>{exp.meta}</p>
       
       {exp.chiffres && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: 14, maxWidth: 980, margin: '32px auto 0' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: `repeat(${exp.chiffres.length},1fr)`, gap: 'clamp(8px,2vw,14px)', maxWidth: 980, margin: '32px auto 0' }}>
           {exp.chiffres.map((c) => (
-            <div key={c.label} style={{ padding: '18px 16px', borderRadius: 16, border: '1px solid #6b2a30', background: 'rgba(255, 252, 245, 0.04)' }}>
-              <p style={{ margin: 0, fontSize: 28, fontWeight: 700, letterSpacing: '-0.04em', color: '#f4a9b4' }}>{c.valeur}</p>
-              <p style={{ margin: '6px 0 0', fontSize: 13, lineHeight: 1.4, color: '#f0d6d6' }}>{c.label}</p>
+            <div key={c.label} style={{ padding: 'clamp(12px,3vw,18px) clamp(8px,2vw,16px)', borderRadius: 16, border: '1px solid #6b2a30', background: 'rgba(255, 252, 245, 0.04)' }}>
+              <p style={{ margin: 0, fontSize: 'clamp(20px,5vw,28px)', fontWeight: 700, letterSpacing: '-0.04em', color: '#f4a9b4' }}>{c.valeur}</p>
+              <p style={{ margin: '6px 0 0', fontSize: 'clamp(11px,2.8vw,13px)', lineHeight: 1.4, color: '#f0d6d6' }}>{c.label}</p>
             </div>
           ))}
         </div>

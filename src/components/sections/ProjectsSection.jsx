@@ -18,12 +18,10 @@ export default function ProjectsSection({ filtre, setFiltre }) {
           </button>
         ))}
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 20, maxWidth: 980, margin: '40px auto 0', textAlign: 'left' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,260px),1fr))', gap: 20, maxWidth: 980, margin: '40px auto 0', textAlign: 'left' }}>
         {projets.map((p) => (
           <div key={p.titre} style={{ background: '#fffcf5', border: '1px solid #ecd6cf', borderRadius: 18, padding: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 8, overflow: 'hidden' }}>
-            <div style={{ width: '100%', aspectRatio: '16/10', margin: '0 0 8px' }}>
-              <img src={p.imgSrc} alt={p.titre} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-            </div>
+            <img src={p.imgSrc} alt={p.titre} style={{ width: '100%', aspectRatio: '16/10', height: 'auto', objectFit: 'cover', display: 'block', margin: '0 0 8px', flexShrink: 0 }} />
             <span style={{ padding: '0 24px', fontSize: 12, fontWeight: 600, letterSpacing: '-0.12px', color: '#8b1a1a', textTransform: 'uppercase' }}>{p.tag}</span>
             <h3 style={{ margin: 0, padding: '0 24px', fontSize: 17, fontWeight: 600, letterSpacing: '-0.374px', color: '#3b1519' }}>{p.titre}</h3>
             <dl style={{ margin: '4px 0 0', padding: '0 24px', display: 'grid', gap: 10 }}>
@@ -41,7 +39,7 @@ export default function ProjectsSection({ filtre, setFiltre }) {
               </div>
             )}
             {p.imgCredit && (
-              <p style={{ margin: 0, padding: '0 24px', fontSize: 11, color: '#a8918f' }}>
+              <p style={{ margin: 'auto 0 0', padding: '0 24px', fontSize: 11, color: '#a8918f' }}>
                 <a href={p.imgCreditHref} target="_blank" rel="noopener noreferrer" style={{ color: '#a8918f' }}>{p.imgCredit}</a>
               </p>
             )}
@@ -52,7 +50,7 @@ export default function ProjectsSection({ filtre, setFiltre }) {
       <h3 style={{ margin: '72px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 600, lineHeight: 1.14, color: '#3b1519' }}>
         Pédale Overdrive-Distorsion : de la simulation au prototype.
       </h3>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 24, maxWidth: 980, margin: '32px auto 0' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,220px),1fr))', gap: 24, maxWidth: 980, margin: '32px auto 0' }}>
         {pedaleGallery.map((im) => (
           <figure key={im.src} style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
             <div style={{ width: '100%', aspectRatio: '4/3', borderRadius: 12, border: '1px solid #ecd6cf', overflow: 'hidden' }}>
@@ -66,7 +64,7 @@ export default function ProjectsSection({ filtre, setFiltre }) {
       <h3 style={{ margin: '72px 0 0', fontFamily: "-apple-system,BlinkMacSystemFont,'SF Pro Display',Inter,system-ui,sans-serif", fontSize: 28, fontWeight: 600, lineHeight: 1.14, color: '#3b1519' }}>
         Robot autonome : des composants au roulage.
       </h3>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: 24, maxWidth: 980, margin: '32px auto 0' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,220px),1fr))', gap: 24, maxWidth: 980, margin: '32px auto 0' }}>
         {robotGallery.map((im) => (
           <figure key={im.src} style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
             <div style={{ width: '100%', aspectRatio: '4/3', borderRadius: 12, border: '1px solid #ecd6cf', overflow: 'hidden' }}>

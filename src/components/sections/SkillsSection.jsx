@@ -29,7 +29,7 @@ export default function SkillsSection() {
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(230px,1fr))', gap: 18, maxWidth: 980, margin: '48px auto 0' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,230px),1fr))', gap: 18, maxWidth: 980, margin: '48px auto 0' }}>
         {skills.map((skill, index) => {
           const style = cardStyles[index % cardStyles.length];
 
