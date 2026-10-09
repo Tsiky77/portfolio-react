@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { CV_PATH } from '../data/portfolioData';
 import { LANGUAGES, useLang } from '../i18n/useLang';
+import { pillSpring } from './motion/presets';
 
 const navIds = ['accueil', 'experience', 'formation', 'projets', 'competences', 'natation', 'contact'];
 
@@ -30,7 +32,8 @@ export default function Dock({ page, goTo }) {
               onClick={() => navigateTo(item.id)}
               aria-current={page === item.id ? 'page' : undefined}
             >
-              {item.label}
+              {page === item.id && <motion.span layoutId="nav-pill" className="site-navigation__pill" transition={pillSpring} />}
+              <span className="site-navigation__link-label">{item.label}</span>
             </button>
           ))}
         </nav>
@@ -139,6 +142,7 @@ export default function Dock({ page, goTo }) {
           flex: 1;
         }
         .site-navigation__link {
+          position: relative;
           padding: 8px 10px;
           border: 0;
           border-radius: 9px;
@@ -148,11 +152,19 @@ export default function Dock({ page, goTo }) {
           line-height: 1;
           transition: background 0.18s ease, color 0.18s ease;
         }
-        .site-navigation__link:hover,
-        .site-navigation__link.is-active {
+        .site-navigation__link:hover {
           background: #12343b;
           color: #fbf7f0;
         }
+        /* Le fond de l'onglet actif est la pastille qui glisse (layoutId). */
+        .site-navigation__link.is-active { color: #fbf7f0; }
+        .site-navigation__pill {
+          position: absolute;
+          inset: 0;
+          border-radius: 9px;
+          background: #12343b;
+        }
+        .site-navigation__link-label { position: relative; }
         .site-navigation__cv,
         .site-navigation__mobile-cv {
           display: inline-flex;
